@@ -1,0 +1,38 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+body {
+    background-color: #e0e2f3 ;
+    padding: 20px;
+}
+#header {
+    background-color: #e0e2f3 ;
+}
+#logo_captions {
+    color: #808080 ;
+    font-size: 20px;
+}
+#p1 {
+    font-size: 18px;
+}
+#testimonials {
+    padding: 5px;
+    background-color: #d3d3d3;
+}
+#h1,#h2, #h1a  {
+    color: #646fc3;
+}
+#glassware {
+    background-color: white;
+}
+p>i {
+    color: #f26521;
+    font-size: 18px;
+}
+#footer {
+    color: #646fc3;
+}
+b.page {
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+}

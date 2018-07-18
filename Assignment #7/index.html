@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Assignment #2</title>
+    <style>
+     body {
+         margin-top: 5%;
+         margin-left: 3%;
+         margin-right: 3%;
+     }   
+    td, th, tr {
+        border: 2px  solid green;
+        font-size: 25px;
+        text-align: left;
+        padding: 20px;
+    }
+    </style>
+    <script>
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var userInput = prompt("Write your birth year...");
+    userInputSliced = userInput.slice(0, 3).toLowerCase();
+    var monthsWith3Char = [];
+    for (var i = 0 ; i < monthNames.length ; i++){
+        monthsWith3Char[i] = monthNames[i].slice(0, 3).toLowerCase();
+    }
+    var temp = false;
+    for (var j = 0 ; j < monthsWith3Char.length ; j++){
+        if(userInputSliced === monthsWith3Char[j]){
+            alert("Your input have been matched...!! \nYou have entered " + userInput);
+            temp = true;
+        }
+    }
+    if (temp === false){
+        alert("ERROR!! not matching with any month name...\nYou have entered " + userInput);
+    }
+    </script>
+
+</head>
+<body>
+    <div>
+    <table align="center" width="100%">
+        <tr>
+            <th>Name:</th>
+            <td>MUHAMMAD YOUSUF</td>
+        </tr>
+        <tr>
+            <th>Father's Name:</th>
+            <td>ABDUL RAZZAQ</td>
+        </tr>
+        <tr>
+            <th>Roll No#:</th>
+            <td>18215</td>
+        </tr>
+        <tr>
+            <th>Batch:</th>
+            <td>5 (Weekend)</td>
+        </tr>
+        <tr>
+            <th>Lab Timing:</th>
+            <td>Saturday 08:00 PM to 10:00 PM</td>
+        </tr>
+        <tr>
+            <th>Class Timing:</th>
+            <td>Sunday 10:00 AM to 01:00 PM</td>
+        </tr>
+        <tr>
+                <th>Assignment Details:</th>
+                <td>
+                    <ul>
+                        <li>Get input from user "Month Name"</li>
+                        <li>Declare an Array and fill with "Complete Months Name"</li>
+                        <li>Get first 3 characters from User Input</li>
+                        <li>Make Empty Array</li>
+                        <li>Fill Empty Array using Months Name but only 3 characters from "Complete Months Name"</li>
+                        <li>Match User Inputs with 3 characters</li>
+                    </ul>
+                </td>
+            </tr>
+    </table>
+</div>
+</body>
+</html>

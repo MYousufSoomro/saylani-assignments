@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Assignment #1</title>
+    <style>
+     body {
+         margin-top: 5%;
+         margin-left: 3%;
+         margin-right: 3%;
+     }   
+    td, th, tr {
+        border: 2px  solid blue;
+        font-size: 25px;
+        text-align: left;
+        padding: 20px;
+    }
+    </style>
+    <script>
+    var badWords = ["Bitch", "Bastard", "Damn", "Asshole", "Shit", "Bollocks", "Bugger"];
+    var userInput = prompt("Enter some texts below...");
+    for (var j = 0 ; j < badWords.length ; j++){
+        var word = Number(badWords[j].length);
+        for ( var k = 0 ; k < userInput.length ; k++){
+            if(userInput.toLowerCase().slice(k, k + word) === badWords[j].toLowerCase()){
+                condition = true;
+                userInput = userInput.slice(0, k) + "*****" + userInput.slice(k + word);
+            }
+        }
+    }
+    alert(userInput); 
+    </script>
+</head>
+<body>
+    <div>
+    <table align="center" width="100%">
+        <tr>
+            <th>Name:</th>
+            <td>MUHAMMAD YOUSUF</td>
+        </tr>
+        <tr>
+            <th>Father's Name:</th>
+            <td>ABDUL RAZZAQ</td>
+        </tr>
+        <tr>
+            <th>Roll No#:</th>
+            <td>18215</td>
+        </tr>
+        <tr>
+            <th>Batch:</th>
+            <td>5 (Weekend)</td>
+        </tr>
+        <tr>
+            <th>Lab Timing:</th>
+            <td>Saturday 08:00 PM to 10:00 PM</td>
+        </tr>
+        <tr>
+            <th>Class Timing:</th>
+            <td>Sunday 10:00 AM to 01:00 PM</td>
+        </tr>
+        <tr>
+                <th>Assignment Details:</th>
+                <td>
+                    <ul>
+                        <li>Get Input from User</li>
+                        <li>Check User Input is Thread or Not</li>
+                        <li>If is it then change to "*****"</li>
+                        <li>Declare an Array and fill with "Threads"</li>
+                        <li>Match Array with User Inputs </li>
+                    </ul>
+                </td>
+            </tr>
+    </table>
+</div>
+</body>
+</html>

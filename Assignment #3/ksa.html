@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment: 03</title>
+</head>
+<body>
+    
+    <h1 align="center">
+      Cities of Saudi Arabia
+    </h1>
+
+    <p>
+      This is a list of cities in 
+      <strong>
+        Saudi Arabia
+      </strong>
+    </p>
+
+    <table border="1" bgcolor="teal">
+
+      <thead>
+
+        <tr>
+          <th>Country Name</th>
+          <th>Name of City</th>
+          <th>Image</th>
+          <th>Population</th>
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td rowspan="4">Saudi Arabia</td>
+          <td>Mekkah</td>
+          <td>
+            <img src="images/mekkah.jpg" height="100" width="150" alt="Mekkah" title="Mekkah" />
+          </td>
+          <td>1.535 Million</td>
+        </tr>
+
+        <tr>
+          <td>Medina</td>
+          <td>
+            <img src="images/medina.jpg" alt="Medina" title="Medina" height="100" width="150" />
+          </td>
+          <td>1.1 Million</td>
+        </tr>
+
+        <tr>
+          <td>Riyadh</td>
+          <td>
+            <img src="images/riyadh.jpg" height="100" width="150" alt="Riyadh" title="Riyadh" />
+          </td>
+          <td>5.18 Million</td>
+        </tr>
+
+        <tr>
+          <td>Jeddah</td>
+          <td>
+            <img src="images/jeddah.jpg" height="100" width="150" alt="Jeddah" title="Jeddah" />
+          </td>
+          <td>3.43 Million</td>
+        </tr>
+
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <th colspan="4">Back to 
+            <a href="index.html">Homepage</a>
+          </th>
+        </tr>
+      </tfoot>
+      
+    </table>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBqCYdNbixe9DuzEFrl_OYIZW_NKI2O_u4",
+        authDomain: "project-1-3ca44.firebaseapp.com",
+        databaseURL: "https://project-1-3ca44.firebaseio.com",
+        projectId: "project-1-3ca44",
+        storageBucket: "project-1-3ca44.appspot.com",
+        messagingSenderId: "457543453442"
+      };
+      firebase.initializeApp(config);
+    </script>
+</body>
+</html>
