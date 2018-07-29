@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Clock Assignment</title>
+    <style>
+    body {
+        background-image: url(https://source.unsplash.com/random);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1, p {
+        color: white;
+        text-align: center;
+        font-size: 15vw;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-shadow: 5px 5px 50px black;
+    }
+    p {
+        font-size: 3vw;
+    }
+    </style>
+</head>
+<body onload="time()">
+    <h1 id="clock"></h1>
+    <p id="date"></p>
+</body>
+<script>
+        function time(){
+            var curTime = new Date();
+            var hours = curTime.getHours();
+            hours = setHourFormat(hours);
+            hours = setTimeFormat(hours);
+            var minutes = curTime.getMinutes();
+            minutes = setTimeFormat(minutes);
+            var seconds = curTime.getSeconds();
+            seconds = setTimeFormat(seconds);
+            var millSec = curTime.getMilliseconds();
+            var centSec = setTimeFormat((millSec / 10).toFixed(0)) ;            
+            document.getElementById('clock').innerHTML = hours + ":" + minutes + ":" + seconds + ":" + centSec;
+            var days = ["Sunday" , "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            for (var j = 0 ; j < days.length ; j++) {
+                var day = days[curTime.getDay()]; 
+            }
+            var date = curTime.getDate();
+            var months = ["January" , "February", "March", "April", "May", "June", "July"];
+            for (var k = 0 ; k < months.length ; k++) {
+                var month = months[curTime.getMonth()]; 
+            }
+            var year = curTime.getFullYear();
+            document.getElementById('date').innerHTML = day + ", " + date + " " + month + ", " + year;
+            setTimeout(time, 1);
+        }
+        function setTimeFormat(i) {
+            if (i < 10) { 
+                i = "0" + i;
+                }
+            return i; 
+        }
+        function setHourFormat(h){
+            if (h > 12){
+                h = h - 12;
+            }else if( h === 0){
+                h = 12;
+            }
+            return h;
+        }
+</script>
+</html>
