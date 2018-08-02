@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STRING METHODS - Chapter 21 - 25</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <ul class="list-unstyled" class="text-white">
+                        <li class="text-white">Name: Muhamamd Yousuf</li>
+                        <li class="text-white">Roll no: 18215</li>
+                        <li class="text-white">Teachers: Sir Tabish Sir Misbah &amp; Sir Salman </li>
+                        <li class="text-white">Class Timing: Sunday 10:00 to 01:00</li>
+                        <li class="text-white">Lab Timing: Saturday 08:00 to 10:00</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                      <li><a href="https://www.facebook.com/MYousuf88" target="_blank" class="text-white">Follow me on Facebook</a></li>
+                      <li><a href="mailto:muhammad.yousuf1996@gmail.com" target="_blank" class="text-white">Email me</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="../index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="../images/java-script.png" alt="icon" height="40" width="40">&nbsp;&nbsp;&nbsp;
+                    <strong>Assignments</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Chapter 21 - 25</h1>
+        <p class="lead">STRING METHODS</p>
+        <hr>
+        <p class="lead text-right">
+            <a class="active" href="../index.html" role="button">Back to home</a>
+        </p>
+    </div>
+
+
+    <div class="container accordion-box">
+        <div id="accordion">
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        1.	Write a program that takes two user inputs for first and last name using prompt and merge them in a new variable titled fullName. Greet the user using his full name.
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <h6 class="card-title">Code:</h6>
+<pre>
+<code>var firstName = prompt("What is your first name?");
+var lastName = prompt("What is your last name?");
+var fullName = firstName + " " + lastName;
+alert("Hello " + fullName + "!");</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q1()">Run</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        2.	Write a program to take a user input about his favorite mobile phone model. Find and display the length of user input in your browser.:
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a2.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre>
+<code>var favMobile = prompt("What is your favorite mobile phone model?");
+alert("My favorite phone is: " + favMobile + "\n" + "Length of string: " + favMobile.length);</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q2()">Run</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        3. Write a program to find the index of letter “n” in the word “Pakistani” and display the result in your browser.
+                    </a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a3.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre>
+<code>var str = "Pakistani";
+var strIndex = str.indexOf('n');
+alert("String: " + str + "\n" + "Index of 'n': " + strIndex);</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q3()">Run</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                        4.	Write a program to find the last index of letter “l” in the word “Hello World” and display the result in your browser.
+                    </a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a4a.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre>
+<code>var str = "Hello World";
+var strIndex = str.lastIndexOf('l');
+alert("String: " + str + "\n" + "Index of 'l': " + strIndex);</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q4()">Run</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseFive">
+                        5.	Write a program to find the character at 3rd index in the word “Pakistani” and display the result in your browser.
+                    </a>
+                </div>
+                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a5.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var str = "Pakistani";
+var charIndex = str.charAt(3);
+alert("String: " + str + "\n" + "Character at index 3: " + charIndex);</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q5()">Run</button>
+                </div> 
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseSix">
+                        6. Repeat Q1 using string concat() method.
+                    </a>
+                </div>
+                <div id="collapseSix" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var firstName = prompt("What is your first name?");
+var lastName = prompt("What is your last name?");
+var fullName = firstName + " " + lastName;
+alert("Hello " + fullName + "!");</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q6()">Run</button>
+                </div> 
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseSeven">
+                        7. Write a program to replace the “Hyder” to “Islam” in the word “Hyderabad” and display the result in your browser.
+                    </a>
+                </div>
+                <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                            <img src="images/a7.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var oldText = "Hyderabad";
+var newText = oldText.replace("Hyder", "Islam");
+alert("City: " + oldText + "\n" + "After replacement: " + newText);</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q7()">Run</button>
+                </div> 
+            </div>
+
+            <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseEight">
+                            8. Write a program to replace all occurrences of “and” in the string with “&” and display the result in your browser.
+                        </a>
+                    </div>
+                    <div id="collapseEight" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a8.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var message = "Ali and Sami are best friends. They play cricket and football together.";
+var newMessage = message.replace(/and/g, "&");
+alert("Message: " + message + "\n" + "After replacement: " + newMessage);</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q8()">Run</button>
+                    </div> 
+            </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseNine">
+                            9. Write a program that converts a string “472” to a number 472. Display the values & types in your browser.
+                        </a>
+                    </div>
+                    <div id="collapseNine" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a9.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var str = "472";
+var strNumb = Number(str);
+alert("Value: " + str + "\n" + "Type: " + typeof(str) + "\n" + "Value: " + strNumb + "\n" + "Type: " + typeof(strNumb));</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q9()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTen">
+                            10. Write a program that take a URL as user input in the following format: (www.facebook.com / www.yahoo.com ). Extract the domain name & show in your browser.
+                        </a>
+                    </div>
+                    <div id="collapseTen" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a10.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var inputWeb = prompt("Write your website URL");
+var domain = inputWeb.slice(4);
+alert("URL: " + inputWeb + "\n" + "Domain: " + domain);</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q10()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseEleven">
+                            11. Write a program that takes user input. Convert and show the input in capital letters.
+                        </a>
+                    </div>
+                    <div id="collapseEleven" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a11.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var userInput = prompt("Write a word");
+alert("User Input: " + userInput + "\n" + "Upper case: " + userInput.toUpperCase());</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q11()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwelve">
+                            12. Write a program that takes user input. Convert and show the input in small letters.
+                        </a>
+                    </div>
+                    <div id="collapseTwelve" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a12.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var userInput = prompt("Write a word");
+alert("User Input: " + userInput + "\n" + "Lower case: " + userInput.toLowerCase());</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q12()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThirteen">
+                            13. Write a program that takes user input. Convert and show the input in title case.
+                        </a>
+                    </div>
+                    <div id="collapseThirteen" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a13.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var userInput = prompt("Write a word");
+var firstWord = userInput.slice(0,1);
+var remWords = userInput.slice(1);
+alert("User input: " + userInput + "\n" + "Title case: " + firstWord.toUpperCase() + remWords);</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q13()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFourteen">
+                            14. Write a program that converts the variable num to string.
+                            <em><strong>var num = 35.36 ;</strong></em>
+                            Remove the dot to display “3536” display in your browser.
+                        </a>
+                    </div>
+                    <div id="collapseFourteen" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a14.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var num = 35.36 ;
+var numToString = num.toString();
+var newText = numToString.replace(".", "");
+alert("Number: " + num + "\n" + "Result: " + newText);</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q14()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFifteen">
+                            15. Write a program to display the value of x in your browser if a=”3” and b=”3”? <strong><em>x = a + b</em></strong>
+                        </a>
+                    </div>
+                    <div id="collapseFifteen" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a15.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var a = 3 ;
+var b = 3 ;
+alert("a is " + a + "\n" + "b is " + b + "\n" + "a + b is " + a + b);</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q15()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseSixteen">
+                            16. Write a program to display the value of y in your browser if a=”3” and b=”3”? <strong><em>y = a - b;</em></strong>
+                        </a>
+                    </div>
+                    <div id="collapseSixteen" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a16.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var a = 3 ;
+var b = 3 ;
+var y = a - b;
+alert("a is " + a + "\n" + "b is " + b + "\n" + "a - b is " + y);</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q16()">Run</button>
+                    </div> 
+                </div>
+
+                <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseSeventeen">
+                                17. Write a program to take user input and store username in a variable. If the username contains any special symbol among [<strong>@ . , !</strong>], prompt the user to enter a valid username.
+                            </a>
+                        </div>
+                        <div id="collapseSeventeen" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                    <img src="images/a17.PNG" class="img-responsive my-4" alt="img">
+                                <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var userName = prompt("Write your Username");
+for (i = 0 ; i < userName.length ; i++){
+    if(userName.charAt(i+1) === "@" || userName.charAt(i+1) === "." || userName.charAt(i+1) === "," || userName.charAt(i+1) === "!"){
+        alert("Please Enter a Valid Username");
+    }
+}</code>
+</pre>
+                            </div>
+                            <button type="button" class="btn btn-success btn-block" onclick="ch1_q17()">Run</button>
+                        </div> 
+                    </div>
+
+                    <div class="card">
+                            <div class="card-header">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseEighteen">
+                                    18. You have an array 
+                                    <strong>
+                                        <em>
+                                            A = [cake”, “apple pie”, “cookie”, “chips”, “patties”]
+                                        </em>
+                                    </strong><br />
+                                    Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given item is found in the list or not. <br />
+                                    Note: Perform case insensitive search. Whether the user enters cookie, Cookie, COOKIE or coOkIE, program should inform about its availability. Example:
+                                </a>
+                            </div>
+                            <div id="collapseEighteen" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                        <img src="images/a18a.PNG" class="img-responsive my-4" alt="img">
+                                        <img src="images/a18b.PNG" class="img-responsive my-4" alt="img">
+                                    <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var userInput = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
+var temp = false;
+for (i = 0 ; i < A.length ; i++){
+    if (userInput.toLowerCase() === A[i].toLowerCase()) {
+        alert(userInput + " is available at index " + i + " in our bakery" );
+        temp = true;
+        break;
+    }
+}
+if (temp === false) {
+    alert("We are soory. " + userInput + " is not available in our bakery");
+}</code>
+</pre>
+                                </div>
+                                <button type="button" class="btn btn-success btn-block" onclick="ch1_q18()">Run</button>
+                            </div> 
+                        </div>
+
+                        <div class="card">
+                                <div class="card-header">
+                                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseNineteen">
+                                        19. Write a program to take two input strings. Using string comparison, tell which string is greater than other or if they both are equal.
+                                    </a>
+                                </div>
+                                <div id="collapseNineteen" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                            <img src="images/a19.PNG" class="img-responsive my-4" alt="img">
+                                        <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var get1 = prompt("Enter Some Text");
+var get2 = prompt("Enter Another Text");
+if (get1 === get2){
+    alert("Both are Equal");
+} else if (get1 > get2){
+    alert(get1 + " is greater than " + get2);
+} else if (get2 > get1){
+    alert(get2 + " is greater than " + get1);
+}</code>
+</pre>
+                                    </div>
+                                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q19()">Run</button>
+                                </div> 
+                            </div>
+
+                            <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwenty">
+                                            20. Write a program to take password as an input from user. The password must qualify these requirements: <br />
+                                            a. It should contain alphabets and numbers<br />
+                                            b. It should not start with a number <br />
+                                            c. It must at least 6 characters long<br />
+                                            If the password does not meet above requirements, prompt the user to enter a valid password.
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwenty" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                                <img src="images/a20.PNG" class="img-responsive my-4" alt="img">
+                                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var inpuPass = prompt("What's your Password?");
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var temp = false;
+for(var i = 0 ; i < inpuPass.length ; i++){
+    if(inpuPass.slice(0, 1) === numbers[i]){
+        alert("Entered Password: " + inpuPass + "\n" + "Password can not start with a number. Please Enter a valid Password");
+        temp = true;
+        break;
+    } else if (inpuPass.length < 6){
+        alert("Entered Password: " + inpuPass + "\n" + "Password must at least 6 characters long. Please Enter a valid Password");
+        temp = true;
+        break;
+    }
+}
+if(temp === false){
+    alert("Your password has been saved. Thank You!");
+}</code>
+</pre>
+                                        </div>
+                                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q20()">Run</button>
+                                    </div> 
+                                </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwentyOne">
+                    21.Write a program to convert the following string to an array using string split method. <br />
+                    <em>
+                        <strong>
+                            var university = “University of Karachi”;
+                        </strong>
+                    </em><br />
+                    Display the elements of array in your browser. 
+                </a>
+            </div>
+            <div id="collapseTwentyOne" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <img src="images/a21.PNG" class="img-responsive my-4" alt="img">
+                    <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var myWindow = window.open();
+var university = "University of Karachi";
+var splitted = university.split("");
+for (var i = 0 ; i < splitted.length ; i++){
+    myWindow.document.write("Index No. " + i + " is " + splitted[i]");
+}</code>
+</pre>
+                </div>
+                <button type="button" class="btn btn-success btn-block" onclick="ch1_q21()">Run</button>
+            </div>
+        </div>
+        
+        <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwentyTwo">
+                        22. Write a program to display the last character of a user input. 
+                    </a>
+                </div>
+                <div id="collapseTwentyTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a22.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var userInput = prompt("Enter Some Text");
+alert("User input: " + userInput + "\n" + "Last character of input: " + userInput.charAt(userInput.length - 1));</code>
+</pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch1_q22()">Run</button>
+                </div>
+            </div>
+            <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwentyThree">
+                            23. You have a string “The quick brown fox jumps over the lazy dog”. Write a program to count number of occurrences of word “the” in given string. 
+                        </a>
+                    </div>
+                    <div id="collapseTwentyThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <img src="images/a23.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var text = ("The quick brown fox jumps over the lazy dog");
+var temp = 0;
+for (var i = 0 ; i < text.length ; i++){
+    if ((text.slice(i, i+3)).toLowerCase() === "the"){
+        temp++
+    }
+    }
+alert("Text: " + text + "\n" + "There are " + temp + " occurrence(s) of word 'the' ");</code>
+</pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch1_q23()">Run</button>
+                    </div>
+                </div>
+            
+        
+                <div class="card">
+                        <div class="card-header">
+                            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwentyFour">
+                                24. Write a program to count number of vowels & consonants in given string <br />
+                                <strong><em>var str = “Pakistan”; </em></strong> 
+                            </a>
+                        </div>
+                        <div id="collapseTwentyFour" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                <h6 class="card-title">Code:</h6>
+<pre class="bg-light">
+<code>var str = "Pakistan";
+var vowels = ["a", "e", "i", "o", "u"]; 
+var count = 0;
+for (var i = 0 ; i < str.length ; i++){
+    for (var j = 0 ; j < vowels.length ; j++){
+        if(str[i].toLowerCase() === vowels[j].toLowerCase()){
+            count++
+        }
+    }
+}
+var totalVowels = count;
+var totalConsonants = str.length - totalVowels;
+alert("There are " + totalVowels + " vowel(s) and " + totalConsonants + " consonant(s) in " + str);</pre>
+                            </div>
+                            <button type="button" class="btn btn-success btn-block" onclick="ch1_q24()">Run</button>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
