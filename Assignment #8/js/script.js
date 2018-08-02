@@ -199,3 +199,217 @@ function ch1_q24(){
   var totalConsonants = str.length - totalVowels;
   alert("There are " + totalVowels + " vowel(s) and " + totalConsonants + " consonant(s) in " + str);
 }
+
+//----------Chapter 2----------//
+
+function ch2_q1(){
+  var inputPositve = Number(prompt("Write Positve Number"));
+  var roundOffValue = Math.round(inputPositve);
+  var floorValue = Math.floor(inputPositve);
+  var ceilValue = Math.ceil(inputPositve);
+  alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);
+}
+
+function ch2_q2(){
+  var inputPositve = Number(prompt("Write Negative Number"));
+  var roundOffValue = Math.round(inputPositve);
+  var floorValue = Math.floor(inputPositve);
+  var ceilValue = Math.ceil(inputPositve);
+  alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);
+}
+
+function ch2_q3(){
+  var inputPositve = Number(prompt("Write Positve floating point Number"));
+  var roundOffValue = Math.round(inputPositve);
+  var floorValue = Math.floor(inputPositve);
+  var ceilValue = Math.ceil(inputPositve);
+  alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);
+}
+
+function ch2_q4(){
+  var inputPositve = Number(prompt("Write Negative floating point Number"));
+  var roundOffValue = Math.round(inputPositve);
+  var floorValue = Math.floor(inputPositve);
+  var ceilValue = Math.ceil(inputPositve);
+  alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);
+}
+
+function ch2_q5(){
+  var inputNumber = Number(prompt("Write Negative floating point Number"));
+  var absoluteValue = Math.abs(inputNumber);
+  alert("The absolute value of " + inputNumber + " is " + absoluteValue);
+}
+
+function ch2_q6(){
+  var randomNumber = Math.random();
+  randomNumber = Math.ceil(randomNumber * 6);
+  alert("random dice value is: " + randomNumber);
+}
+
+function ch2_q7(){
+  var randomNumber = Math.random();
+  randomNumber = Math.ceil(randomNumber * 2);
+  var coinToss = ["Error", "Tails", "Heads"]; 
+  alert(randomNumber + "\nrandom coin value is: " + coinToss[randomNumber]);
+}
+
+function ch2_q8(){
+  var randomNumber = Math.random();
+  randomNumber = Math.ceil(randomNumber * 100);
+  alert("random number between 1 and 100: " + randomNumber);
+}
+
+function ch2_q9(){
+  var temp = false;
+  var userInput = prompt("Enter your weight in kilograms");
+  for(var i = 0 ; i < userInput.length ; i++){
+    if(userInput.slice(i, i+4) === " kgs"){
+      userInput = userInput.slice(0, i) + " kilograms";
+      temp = true;
+      break;
+    }else if(userInput.slice(i, i+3) === "kgs"){
+      userInput = userInput.slice(0, i) + " kilograms";
+      temp = true;
+      break;
+    }else if(userInput.slice(i, i+10) === " kilograms"){
+      temp = true;
+      break;
+    }else if(userInput.slice(i, i+9) === "kilograms"){
+      userInput = userInput.slice(0, i) + " kilograms";
+      temp = true;
+      break;
+    }
+  }
+  if (temp === false){
+    userInput = userInput + " kilograms";
+  }
+  alert("The weight of user is " + userInput);
+}
+
+function ch2_q10(){
+  var randomNumber = Math.random();
+  randomNumber = Math.ceil(randomNumber * 10);
+  var userInput = Number(prompt("Enter a number between 1 and 10"));
+  if (userInput !== randomNumber){
+    alert("Try again!\nCorrect answer was: " + randomNumber);
+  }else{
+    alert("Congrats... You've guessed correct!");
+  }
+}
+
+function ch2_q11(){
+  var currentDate = new Date();
+  alert(currentDate);
+}
+
+function ch2_q12(){
+  var currentDate = new Date();
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var month = currentDate.getMonth();
+  for(var i = 0; i < months.length; i++){
+    if(i === month){
+    alert("Current Month: " + months[i]);
+    break;
+    }
+  }
+}
+
+function ch2_q13(){
+  var currentDate = new Date();
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var day = currentDate.getDay();
+  for(var i = 0; i < days.length; i++){
+    if(i === day){
+      var day2 = days[i].slice(0, 3);
+    alert("Today is: " + day2);
+    break;
+    }
+  }
+}
+
+function ch2_q14(){
+  var currentDate = new Date();
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var day = days[currentDate.getDay()];
+  for(var i = 0; i < days.length; i++){
+    if(day === "Sunday"){
+      var day2 = "Fun" + day.slice(3);
+      alert("Today is: " + day2);
+      break;
+    }else if(day === "Saturday"){
+      var day2 = "Fun" + day.slice(5);
+      alert("Today is: " + day2);
+      break;
+    }else{
+      alert("Today is: " + day);
+      break;
+    }
+  }
+}
+
+function ch2_q15(){
+  var currentDate = new Date();
+  var todayDate = currentDate.getDate();
+  if(todayDate < 16){
+    alert("First fifteen days of the month");
+  }else{
+    alert("Last days of the month");
+  }
+}
+
+function ch2_q16(){
+  var currentDate = new Date();
+  var milliSeconds = currentDate.getTime();
+  alert("Current Date: " + currentDate + "\n" + "Elapsed milliseconds since January 1, 1970: " + milliSeconds + "\n" + "Elapsed minutes since January 1, 1970: " + milliSeconds/1000/60);
+}
+
+function ch2_q17(){
+  var currentDate = new Date();
+  var time = currentDate.getHours();
+  if(time < 12){
+    alert("It's AM");
+  }else{
+    alert("It's PM");
+  }
+}
+
+function ch2_q18(){
+  var laterDate = new Date("December 31, 2020");
+  alert("Later date: " + laterDate);
+}
+
+function ch2_q19(){
+  var newDate = new Date();
+  var firstRamzanDate = new Date("June 18, 2015");
+  var newDateMilli = newDate.getTime();
+  var firstRamzanDateMilli = firstRamzanDate.getTime();
+  var milliDiff = newDateMilli - firstRamzanDateMilli;
+  var daysCalc = Math.ceil(milliDiff / 1000 / 60 / 60 / 24) ;
+  alert(daysCalc + " days have passed since 1st Ramzan, 2015");
+}
+
+function ch2_q20(){
+  var refDate = new Date("December 5, 2015 22:50:16");
+  var beginDate = new Date("January 1, 2015");
+  var refDateMilli = refDate.getTime();
+  var beginDateMilli = beginDate.getTime();
+  var milliDiff = refDateMilli - beginDateMilli;
+  var secCalc = Math.ceil(milliDiff / 1000 / 60) ;
+  alert(secCalc + " seconds had passed since begining of 2015");
+}
+
+function ch2_q21(){
+  alert("This Question #21 is On Hold...")
+}
+
+function ch2_q22(){
+  alert("This Question #22 is On Hold...")
+}
+
+function ch2_q23(){
+  alert("This Question #23 is On Hold...")
+}
+
+function ch2_q24(){
+  alert("This Question #24 is On Hold...")
+}

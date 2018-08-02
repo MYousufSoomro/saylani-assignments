@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MATH AND DATE METHODS - Chapter 26 - 34</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <ul class="list-unstyled" class="text-white">
+                        <li class="text-white">Name: Muhamamd Yousuf</li>
+                        <li class="text-white">Roll no: 18215</li>
+                        <li class="text-white">Teachers: Sir Tabish Sir Misbah &amp; Sir Salman </li>
+                        <li class="text-white">Class Timing: Sunday 10:00 to 01:00</li>
+                        <li class="text-white">Lab Timing: Saturday 08:00 to 10:00</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Contact</h4>
+                    <ul class="list-unstyled">
+                      <li><a href="https://www.facebook.com/MYousuf88" target="_blank" class="text-white">Follow me on Facebook</a></li>
+                      <li><a href="mailto:muhammad.yousuf1996@gmail.com" target="_blank" class="text-white">Email me</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark box-shadow">
+            <div class="container d-flex justify-content-between">
+                <a href="../index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="../images/java-script.png" alt="icon" height="40" width="40">&nbsp;&nbsp;&nbsp;
+                    <strong>Assignments</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Chapter 26 - 34</h1>
+        <p class="lead">MATH AND DATE METHODS</p>
+        <hr>
+        <p class="lead text-right">
+            <a class="active" href="../index.html" role="button">Back to home</a>
+        </p>
+    </div>
+
+
+    <div class="container accordion-box">
+        <div id="accordion">
+
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        1.	Write a program that takes a positive integer from user & display the following in your browser. <br />
+                        a. number <br />
+                        b. round off value of the number <br />
+                        c. floor value of the number <br />
+                        d. ceil value of the number 
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                            <img src="images/a1.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre><code>var inputPositve = Number(prompt("Write Positve Number"));
+var roundOffValue = Math.round(inputPositve);
+var floorValue = Math.floor(inputPositve);
+var ceilValue = Math.ceil(inputPositve);
+alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);</code></pre>
+                    </div>
+                    <button type="button" class="btn btn-success btn-block" onclick="ch2_q1()">Run</button>
+                </div>
+            </div>
+
+            <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+                            2.	Write a program that takes a negative integer from user & display the following in your browser. <br />
+                            a. number <br />
+                            b. round off value of the number <br />
+                            c. floor value of the number <br />
+                            d. ceil value of the number 
+                        </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                                <img src="images/a2.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre><code>var inputPositve = Number(prompt("Write Negative Number"));
+var roundOffValue = Math.round(inputPositve);
+var floorValue = Math.floor(inputPositve);
+var ceilValue = Math.ceil(inputPositve);
+alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);</code></pre>
+                        </div>
+                        <button type="button" class="btn btn-success btn-block" onclick="ch2_q2()">Run</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseThree">
+                                3. Write a program that takes a positive floating point number from user & display the following in your browser. <br />
+                                a. number <br />
+                                b. round off value of the number <br />
+                                c. floor value of the number <br />
+                                d. ceil value of the number 
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="collapse" data-parent="#accordion">
+                            <div class="card-body">
+                                    <img src="images/a3.PNG" class="img-responsive my-4" alt="img">
+                                <h6 class="card-title">Code:</h6>
+<pre><code>var inputPositve = Number(prompt("Write Positve floating point Number"));
+var roundOffValue = Math.round(inputPositve);
+var floorValue = Math.floor(inputPositve);
+var ceilValue = Math.ceil(inputPositve);
+alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);</code></pre>
+                            </div>
+                            <button type="button" class="btn btn-success btn-block" onclick="ch2_q3()">Run</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                            <div class="card-header">
+                                <a class="card-link" data-toggle="collapse" href="#collapseFour">
+                                    4. Write a program that takes a negative floating point number from user & display the following in your browser. <br />
+                                    a. number <br />
+                                    b. round off value of the number <br />
+                                    c. floor value of the number <br />
+                                    d. ceil value of the number  
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                        <img src="images/a4.PNG" class="img-responsive my-4" alt="img">
+                                    <h6 class="card-title">Code:</h6>
+<pre><code>var inputPositve = Number(prompt("Write Negative floating point Number"));
+var roundOffValue = Math.round(inputPositve);
+var floorValue = Math.floor(inputPositve);
+var ceilValue = Math.ceil(inputPositve);
+alert("number: " + inputPositve + "\n" + "round off value: " + roundOffValue + "\n" + "floor value: " + floorValue + "\n" + "ceil value: " + ceilValue);</code></pre>
+                                </div>
+                                <button type="button" class="btn btn-success btn-block" onclick="ch2_q4()">Run</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                                <div class="card-header">
+                                    <a class="card-link" data-toggle="collapse" href="#collapseFive">
+                                        5. Write a program that displays the absolute value of a number. E.g. absolute value of -4 is 4 & absolute value of 5 is 5
+                                    </a>
+                                </div>
+                                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                                    <div class="card-body">
+                                            <img src="images/a5.PNG" class="img-responsive my-4" alt="img">
+                                        <h6 class="card-title">Code:</h6>
+<pre><code>var inputNumber = Number(prompt("Write Negative floating point Number"));
+var absoluteValue = Math.abs(inputNumber);
+alert("The absolute value of " + inputNumber + " is " + absoluteValue);</code></pre>
+                                    </div>
+                                    <button type="button" class="btn btn-success btn-block" onclick="ch2_q5()">Run</button>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                    <div class="card-header">
+                                        <a class="card-link" data-toggle="collapse" href="#collapseSix">
+                                            6. Write a program that simulates a dice using random() method of JS Math class. Display the value of dice in your browser. 
+                                        </a>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" data-parent="#accordion">
+                                        <div class="card-body">
+                                                <img src="images/a6.PNG" class="img-responsive my-4" alt="img">
+                                            <h6 class="card-title">Code:</h6>
+<pre><code>var randomNumber = Math.random();
+randomNumber = Math.ceil(randomNumber * 6);
+alert("random dice value is: " + randomNumber);</code></pre>
+                                        </div>
+                                        <button type="button" class="btn btn-success btn-block" onclick="ch2_q6()">Run</button>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                        <div class="card-header">
+                                            <a class="card-link" data-toggle="collapse" href="#collapseSeven">
+                                                7. Write a program that simulates a coin toss using random() method of JS Math class. Display the value of coin in your browser.
+                                            </a>
+                                        </div>
+                                        <div id="collapseSeven" class="collapse" data-parent="#accordion">
+                                            <div class="card-body">
+                                                    <img src="images/a7.PNG" class="img-responsive my-4" alt="img">
+                                                <h6 class="card-title">Code:</h6>
+<pre><code>var randomNumber = Math.random();
+randomNumber = Math.ceil(randomNumber * 2);
+var coinToss = ["Error", "Tails", "Heads"]; 
+alert(randomNumber + "\nrandom coin value is: " + coinToss[randomNumber]);</code></pre>
+                                            </div>
+                                            <button type="button" class="btn btn-success btn-block" onclick="ch2_q7()">Run</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                            <div class="card-header">
+                                                <a class="card-link" data-toggle="collapse" href="#collapseEight">
+                                                    8. Write a program that shows a random number between 1 and 100 in your browser. 
+                                                </a>
+                                            </div>
+                                            <div id="collapseEight" class="collapse" data-parent="#accordion">
+                                                <div class="card-body">
+                                                        <img src="images/a8.PNG" class="img-responsive my-4" alt="img">
+                                                    <h6 class="card-title">Code:</h6>
+<pre><code>var randomNumber = Math.random();
+randomNumber = Math.ceil(randomNumber * 100);
+alert("random number between 1 and 100: " + randomNumber);</code></pre>
+                                                </div>
+                                                <button type="button" class="btn btn-success btn-block" onclick="ch2_q8()">Run</button>
+                                            </div>
+                                        </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseNine">
+                9. Write a program that asks the user about his weight. Parse the user input and display his weight in your browser. Possible user inputs can be: <br />
+                a. 50 <br />
+                b. 50kgs <br />
+                c. 50.2kgs <br />
+                d. 50.2kilograms 
+            </a>
+        </div>
+        <div id="collapseNine" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <img src="images/a9.PNG" class="img-responsive my-4" alt="img">
+                    <h6 class="card-title">Code:</h6>
+<pre><code>var temp = false;
+var userInput = prompt("Enter your weight in kilograms");
+for(var i = 0 ; i < userInput.length ; i++){
+    if(userInput.slice(i, i+4) === " kgs"){
+        userInput = userInput.slice(0, i) + " kilograms";
+        temp = true;
+        break;
+    }else if(userInput.slice(i, i+3) === "kgs"){
+        userInput = userInput.slice(0, i) + " kilograms";
+        temp = true;
+        break;
+    }else if(userInput.slice(i, i+10) === " kilograms"){
+        temp = true;
+        break;
+    }else if(userInput.slice(i, i+9) === "kilograms"){
+        userInput = userInput.slice(0, i) + " kilograms";
+        temp = true;
+        break;
+    }
+}
+if (temp === false){
+    userInput = userInput + " kilograms";
+}
+alert("The weight of user is " + userInput);</code></pre>
+                                                    </div>
+                                                    <button type="button" class="btn btn-success btn-block" onclick="ch2_q9()">Run</button>
+                                                </div>
+                                            </div>
+    
+        <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseTen">
+                        10. Write a program that stores a random secret number from 1 to 10 in a variable. Ask the user to input a number between 1 and 10. If the user input equals the secret number, congratulate the user.  
+                    </a>
+                </div>
+                <div id="collapseTen" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a10a.PNG" class="img-responsive my-4" alt="img">
+                        <img src="images/a10b.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre><code>var randomNumber = Math.random();
+randomNumber = Math.ceil(randomNumber * 10);
+var userInput = Number(prompt("Enter a number between 1 and 10"));
+if (userInput !== randomNumber){
+    alert("Try again!\nCorrect answer was: " + randomNumber);
+}else{
+    alert("Congrats... You've guessed correct!");
+}</code></pre>
+                                                                                                </div>
+                                                                                                <button type="button" class="btn btn-success btn-block" onclick="ch2_q10()">Run</button>
+               </div>
+           </div>
+
+           <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseEleven">
+                        11. Write a program that displays current date and time in your browser. 
+                    </a>
+                </div>
+                <div id="collapseEleven" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a11.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+alert(currentDate);</code></pre>
+                                                                                                </div>
+                                                                                                <button type="button" class="btn btn-success btn-block" onclick="ch2_q11()">Run</button>
+               </div>
+           </div>
+        
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwelve">
+                12. Write a program that alerts the current month in words. For example December.
+            </a>
+        </div>
+        <div id="collapseTwelve" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+                <img src="images/a12.PNG" class="img-responsive my-4" alt="img">
+                    <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var month = currentDate.getMonth();
+for(var i = 0; i < months.length; i++){
+    if(i === month){
+    alert("Current Month: " + months[i]);
+    break;
+    }
+}</code></pre>
+                                                                                        </div>
+                                                                                        <button type="button" class="btn btn-success btn-block" onclick="ch2_q12()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseThirteen">
+                    13. Write a program that alerts the first 3 letters of the current day, for example if today is Sunday then alert will show Sun. 
+                </a>
+            </div>
+            <div id="collapseThirteen" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    <img src="images/a13.PNG" class="img-responsive my-4" alt="img">
+                        <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var day = currentDate.getDay();
+for(var i = 0; i < days.length; i++){
+    if(i === day){
+    var day2 = days[i].slice(0, 3);
+    alert("Today is: " + day2);
+    break;
+    }
+}</code></pre>
+                                                                                            </div>
+                                                                                            <button type="button" class="btn btn-success btn-block" onclick="ch2_q13()">Run</button>
+            </div>
+        </div>
+
+        <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseFourteen">
+                        14. Write a program that displays a message “It’s Fun day” if its Saturday or Sunday today.  
+                    </a>
+                </div>
+                <div id="collapseFourteen" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <img src="images/a14.PNG" class="img-responsive my-4" alt="img">
+                            <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var day = days[currentDate.getDay()];
+for(var i = 0; i < days.length; i++){
+    if(day === "Sunday"){
+        var day2 = "Fun" + day.slice(3);
+        alert("Today is: " + day2);
+        break;
+    }else if(day === "Saturday"){
+        var day2 = "Fun" + day.slice(5);
+        alert("Today is: " + day2);
+        break;
+    }else{
+        alert("Today is: " + day);
+        break;
+    }
+}</code></pre>
+                                                                                                </div>
+                                                                                                <button type="button" class="btn btn-success btn-block" onclick="ch2_q14()">Run</button>
+                </div>
+            </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseFifteen">
+                15. Write a program that shows the message “First fifteen days of the month” if the date is less than 16th of the month else shows “Last days of the month”.   
+            </a>
+        </div>
+    <div id="collapseFifteen" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a15.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+var todayDate = currentDate.getDate();
+if(todayDate < 16){
+    alert("First fifteen days of the month");
+}else{
+    alert("Last days of the month");
+}</code></pre>
+       </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q15()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseSixteen">
+                16. Write a program that determines the minutes since midnight, Jan. 1, 1970 and assigns it to a variable that hasn't been declared beforehand. Use any variable you like to represent the Date object.    
+            </a>
+        </div>
+    <div id="collapseSixteen" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a16.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+var milliSeconds = currentDate.getTime();
+alert("Current Date: " + currentDate + "\n" + "Elapsed milliseconds since January 1, 1970: " + milliSeconds + "\n" + "Elapsed minutes since January 1, 1970: " + milliSeconds/1000/60);</code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q16()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseSeventeen">
+                17. Write a program that tests whether it's before noon and alert “Its AM” else “its PM”.     
+            </a>
+        </div>
+    <div id="collapseSeventeen" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a17.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code>var currentDate = new Date();
+var time = currentDate.getHours();
+if(time < 12){
+    alert("It's AM");
+}else{
+    alert("It's PM");
+}</code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q17()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseEighteen">
+                18. Write a program that creates a Date object for the last day of the last month of 2020 and assigns it to variable named laterDate      
+            </a>
+        </div>
+    <div id="collapseEighteen" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a18.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code>var laterDate = new Date("December 31, 2020");
+alert("Later date: " + laterDate);</code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q18()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseNineteen">
+                19. Create a date object of the starting date of this Ramadan and alert the number of days past since 1st Ramadan? <br />
+                Note: 1st Ramadan was on June 18, 2015
+            </a>
+        </div>
+    <div id="collapseNineteen" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a19.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code>var newDate = new Date();
+var firstRamzanDate = new Date("June 18, 2015");
+var newDateMilli = newDate.getTime();
+var firstRamzanDateMilli = firstRamzanDate.getTime();
+var milliDiff = newDateMilli - firstRamzanDateMilli;
+var daysCalc = Math.ceil(milliDiff / 1000 / 60 / 60 / 24) ;
+alert(daysCalc + " days have passed since 1st Ramzan, 2015");</code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q19()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwenty">
+                20. Write a program that displays in your browser the seconds that elapsed between the reference date and the beginning of 2015. 
+            </a>
+        </div>
+    <div id="collapseTwenty" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a20.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code>var refDate = new Date("December 5, 2015 22:50:16");
+var beginDate = new Date("January 1, 2015");
+var refDateMilli = refDate.getTime();
+var beginDateMilli = beginDate.getTime();
+var milliDiff = refDateMilli - beginDateMilli;
+var secCalc = Math.ceil(milliDiff / 1000 / 60) ;
+alert(secCalc + " seconds had passed since begining of 2015");</code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q20()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwentyOne">
+                21. Create a Date object for the current date and time. Extract the hours, reset the date object an hour ahead and finally display the date object in your browser.  
+            </a>
+        </div>
+    <div id="collapseTwentyOne" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a21.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code></code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q21()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwentyTwo">
+                22. Write a program that creates a date object and show the date in an alert box that is reset to 100 years back?   
+            </a>
+        </div>
+    <div id="collapseTwentyTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a22.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code></code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q22()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwentyThree">
+                23. Write a program to ask the user about his age. Calculate and show his birth year in your browser.
+            </a>
+        </div>
+    <div id="collapseTwentyThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a23.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code></code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q23()">Run</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#collapseTwentyFour">
+                24. Write a program to generate your K-Electric bill in your browser. All the amounts should be rounded off to 2 decimal places. Display the following fields: <br /> 
+                a. Customer Name <br />
+                b. Current Month <br />
+                c. Number of units <br />
+                d. Charges per unit <br />
+                e. Net Amount Payable (within Due Date) <br />
+                f. Late Payment Surcharge <br />
+                g. Gross Amount Payable (after Due Date)
+            </a>
+        </div>
+    <div id="collapseTwentyFour" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+            <img src="images/a24.PNG" class="img-responsive my-4" alt="img">
+            <h6 class="card-title">Code:</h6>
+<pre><code></code></pre>
+        </div>
+        <button type="button" class="btn btn-success btn-block" onclick="ch2_q24()">Run</button>
+        </div>
+    </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
