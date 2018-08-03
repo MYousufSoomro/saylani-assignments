@@ -403,13 +403,42 @@ function ch2_q21(){
 }
 
 function ch2_q22(){
-  alert("This Question #22 is On Hold...")
+  var newDate = new Date();
+  var yearBack = new Date();
+  var currentYear = newDate.getFullYear();
+  currentYear = currentYear - 100;
+  yearBack.setFullYear(currentYear)
+  alert("Current Date: " + newDate + "\n" + "100 years back, it was " + yearBack);
 }
 
 function ch2_q23(){
-  alert("This Question #23 is On Hold...")
+  var userAge = prompt("Enter your age...")
+  var currentDate = new Date();
+  var birthYear = currentDate.getFullYear() - userAge ;
+  alert("Your age is " + userAge + "\n" + "Your birth year is " + birthYear);
 }
 
 function ch2_q24(){
-  alert("This Question #24 is On Hold...")
+  var custName = prompt("Enter Customer Name");
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var newDate = new Date();
+  var currentMont = months[newDate.getMonth()];
+  var totalUnits = Number(prompt("Enter Number of Units"));
+  var chargesUnits = Number(prompt("Enter Charges of Per Unit"));
+  var netAmount = totalUnits * chargesUnits;
+      netAmount = Number(netAmount.toFixed(2));
+  var lateSurcharge = (netAmount/100)*12;
+      lateSurcharge = Number(lateSurcharge.toFixed(2));
+  var GrossAmount = Number(netAmount + lateSurcharge);
+      GrossAmount = Number(GrossAmount.toFixed(2));
+  var newTab = window.open();
+  newTab.document.write("<h1>K-Electric Bill</h1>");
+  newTab.document.write("<p>Customer Name: " + "<strong>" + custName + "</strong>"  +"</p>");
+  newTab.document.write("<p>Month: " + "<strong>" + currentMont + "</strong>"  +"</p>");
+  newTab.document.write("<p>Number of Units: " + "<strong>" + totalUnits + "</strong>"  +"</p>");
+  newTab.document.write("<p>Charges per Units: " + "<strong>" + chargesUnits + "</strong>"  +"</p>");
+  newTab.document.write("<br />");
+  newTab.document.write("<p>Net Amount Payable (within Due Date): " + "<strong>" + netAmount + "</strong>"  +"</p>");
+  newTab.document.write("<p>Late payment surcharge: " + "<strong>" + lateSurcharge + "</strong>"  +"</p>");
+  newTab.document.write("<p>Gross Amount Payable (after Due Date): " + "<strong>" + GrossAmount + "</strong>"  +"</p>");
 }
