@@ -610,15 +610,15 @@ var lateSurcharge = (netAmount/100)*12;
 var GrossAmount = Number(netAmount + lateSurcharge);
   GrossAmount = Number(GrossAmount.toFixed(2));
 var newTab = window.open();
-newTab.document.write("<h1>K-Electric Bill</h1>");
-newTab.document.write("<p>Customer Name: " + "<strong>" + custName + "</strong>"  +"</p>");
-newTab.document.write("<p>Month: " + "<strong>" + currentMont + "</strong>"  +"</p>");
-newTab.document.write("<p>Number of Units: " + "<strong>" + totalUnits + "</strong>"  +"</p>");
-newTab.document.write("<p>Charges per Units: " + "<strong>" + chargesUnits + "</strong>"  +"</p>");
-newTab.document.write("<br />");
-newTab.document.write("<p>Net Amount Payable (within Due Date): " + "<strong>" + netAmount + "</strong>"  +"</p>");
-newTab.document.write("<p>Late payment surcharge: " + "<strong>" + lateSurcharge + "</strong>"  +"</p>");
-newTab.document.write("<p>Gross Amount Payable (after Due Date): " + "<strong>" + GrossAmount + "</strong>"  +"</p>");</code></pre>
+newTab.document.write("< h1 >K-Electric Bill</ h1 >");
+newTab.document.write("< p >Customer Name: " + "<strong>" + custName + "</strong>"  +"</ p >");
+newTab.document.write("< p >Month: " + "< strong >" + currentMont + "</ strong >"  +"</ p >");
+newTab.document.write("< p >Number of Units: " + "<strong>" + totalUnits + "</strong>"  +"</p>");
+newTab.document.write("< p >Charges per Units: " + "< strong >" + chargesUnits + "</ strong >"  +"</ p >");
+newTab.document.write("< br />");
+newTab.document.write("< p >Net Amount Payable (within Due Date): " + "< strong >" + netAmount + "</ strong >"  +"</ p >");
+newTab.document.write("< p >Late payment surcharge: " + "< strong >" + lateSurcharge + "</ strong >"  +"</ p >");
+newTab.document.write("< p >Gross Amount Payable (after Due Date): " + "< strong >" + GrossAmount + "</ strong >"  +"</ p >");</code></pre>
         </div>
         <button type="button" class="btn btn-success btn-block" onclick="ch2_q24()">Run</button>
         </div>
