@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("../images/background.png");
+    background-color: red;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.button {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 2px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #607d8b
+}
+.button:hover{
+    background: #375e72
+}
+.textview {
+    width: 205px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 25px;
+    border: none;
+    color: #607d8b
+}
+
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
