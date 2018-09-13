@@ -1,49 +1,71 @@
 var count;
 var temp = 0;
 function onLoad() {
-    var userOne = prompt("Enter X or Y to continue...");
-    var userTwo;
-    if (userOne.toLowerCase() !== 'x' && userOne.toLowerCase() !== 'y') {
-        alert('Please select valid option... \nTry Again...');
-        onLoad();
-    } else if (userOne.toLowerCase() === 'x') {
-        alert('You selected "X"\n \nSecond User is "Y"');
-        userTwo = 'y';
-        count = 0;
-        return count;
-    } else if (userOne.toLowerCase() === 'y') {
-        alert('You selected "Y"\n \nSecond User is "X"');
-        userTwo = 'x';
-        count = 1;
-        return count;
-    }
+    swal("Enter X or Y to continue...", {
+        content: "input",
+        closeOnClickOutside: false,
+        closeOnEsc: false,
+    })
+        .then((value) => {
+            if (value.toLowerCase() !== 'x' && value.toLowerCase() !== "y") {
+                swal({
+                    title: "oh noes, there's nothing in here!",
+                    text: "You are only allowed to enter 'X' or 'Y'",
+                    icon: "error",
+                    button: {
+                        text: "Try again!",
+                        closeModal: true,
+                    }
+                })
+                    .then(() => {
+                        location = './index.html'
+                    });
+            } else if (value === 'x' || value === "X") {
+                swal({
+                    title: "You Selected X!",
+                    text: "Second User is Y!",
+                    icon: "success",
+                    button: "Play Now!",
+                });
+                count = 0;
+                return count;
+            } else if (value === 'y' || value === "Y") {
+                swal({
+                    title: "You Selected Y!",
+                    text: "Second User is X!",
+                    icon: "success",
+                    button: "Play Now!",
+                });
+                count = 1;
+                return count;
+            }
+        });
 }
-
-var value = onLoad();
 
 var headDiv = document.getElementById('heading');
 var h1 = document.createElement('h1');
+h1.setAttribute('class', "jumbotron");
 var h1Text = document.createTextNode('Tic Tac Toe');
 h1.appendChild(h1Text);
 headDiv.appendChild(h1);
 
 var btnOneValue;
 function button1() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button1');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnOneValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button1');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnOneValue = 'y';
         result();
@@ -52,21 +74,21 @@ function button1() {
 
 var btnTwoValue;
 function button2() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button2');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnTwoValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button2');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnTwoValue = 'y';
         result();
@@ -75,21 +97,21 @@ function button2() {
 
 var btnThreeValue;
 function button3() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button3');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnThreeValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button3');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnThreeValue = 'y';
         result();
@@ -98,21 +120,21 @@ function button3() {
 
 var btnFourValue;
 function button4() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button4');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnFourValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button4');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnFourValue = 'y';
         result();
@@ -121,21 +143,21 @@ function button4() {
 
 var btnFiveValue;
 function button5() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button5');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnFiveValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button5');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnFiveValue = 'y';
         result();
@@ -144,21 +166,21 @@ function button5() {
 
 var btnSixValue;
 function button6() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button6');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnSixValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button6');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnSixValue = 'y';
         result();
@@ -167,21 +189,21 @@ function button6() {
 
 var btnSevenValue;
 function button7() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button7');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnSevenValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button7');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnSevenValue = 'y';
         result();
@@ -190,21 +212,21 @@ function button7() {
 
 var btnEightValue;
 function button8() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button8');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnEightValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button8');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnEightValue = 'y';
         result();
@@ -213,21 +235,21 @@ function button8() {
 
 var btnNineValue;
 function button9() {
-    if (value === 0) {
+    if (count === 0) {
         var butOne = document.getElementById('button9');
         butOne.setAttribute('value', "X");
         butOne.setAttribute('style', "color: white; background-color: red; font-weight: bold;");
         butOne.removeAttribute('onClick');
-        value = 1;
+        count = 1;
         temp++;
         btnNineValue = 'x';
         result();
-    } else if (value === 1) {
+    } else if (count === 1) {
         var butOne = document.getElementById('button9');
         butOne.setAttribute('value', "Y");
         butOne.removeAttribute('onClick');
         butOne.setAttribute('style', "color: white; background-color: green; font-weight: bold;");
-        value = 0;
+        count = 0;
         temp++;
         btnNineValue = 'y';
         result();
