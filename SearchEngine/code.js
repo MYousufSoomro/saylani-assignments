@@ -93,36 +93,8 @@ for (var key1 in mobilePhones) {
     for (var key2 in mobilePhones[key1]) {
         document.getElementById('table').innerHTML +=
             "<tr>"
-            + "<th class='bg-danger'>" + "Model Name:" + "</th>"
-            + "<th class='bg-danger'>" + key2 + "</th>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "OS:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].OS + "</td>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "SIM:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].SIM + "</td>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "Chipset:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].Chipset + "</td>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "Size:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].Size + "</td>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "RAM:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].RAM + "</td>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "Storage:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].Storage + "</td>" +
-            "</tr>" +
-            "<tr>"
-            + "<th class='bg-primary'>" + "Price:" + "</th>"
-            + "<td class='bg-warning'>" + mobilePhones[key1][key2].Price + "</td>" +
+            + "<th class='table-info thh'>" + "Model Name:" + "</th>"
+            + "<th class='table-light thh'>" + key2 + " (" + key1.toUpperCase() + ")</th>" +
             "</tr>"
     }
 }
@@ -141,7 +113,7 @@ function check() {
                     document.getElementById('table').innerHTML =
                         "<tr>"
                         + "<th class='bg-danger'>" + "Model Name:" + "</th>"
-                        + "<th class='bg-danger'>" + key2 + "</th>" +
+                        + "<th class='bg-danger'>" + key1.toUpperCase() + " " + key2 + "</th>" +
                         "</tr>" +
                         "<tr>"
                         + "<th class='bg-primary'>" + "OS:" + "</th>"
