@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#DC3545" />
+    <link rel="shortcut icon" type="image/png" href="https://tinyurl.com/searchpng"/>
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -15,6 +17,10 @@
     <style>
         th {
             color: white;
+        }
+
+        .thh {
+            color: black
         }
     </style>
 
@@ -32,12 +38,12 @@
             </div>
         </div>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" id="inputBox" placeholder="Search here..." aria-describedby="button-addon2">
+            <input type="text" class="form-control" id="inputBox" placeholder="Write Model Name Here to See Details..." aria-describedby="button-addon2">
             <div class="input-group-append">
                 <button class="btn btn-primary" type="button" id="button-addon2" onClick="check()">Search</button>
             </div>
         </div>
-        <table id="table" class="table"></table>
+        <table id="table" class="table table-hover"></table>
     </div>
 
     <!-- Optional JavaScript -->
