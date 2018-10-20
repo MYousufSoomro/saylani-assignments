@@ -1,0 +1,149 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: azure
+
+}
+#mainDiv {
+    margin-right: 5%;
+    margin-left: 5%;
+    /* margin-top: 2%; */
+    padding: 5%;
+    background-color: white
+}
+#head_para {
+    background-color: aqua;
+    padding: 5%
+}
+.inputBox {
+width: 70%;
+height: 30px;;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 30px;
+padding: 2px;
+margin: 5px;
+}
+.input2{
+    width: 25%;
+    height: 30px;;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    padding: 2px;
+    margin: 5px;    
+}
+.addBtn {
+    width: 100px;
+    /* margin-top: 30px; */
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    background-color: crimson;
+    color: white;
+}
+.addBtn:hover{
+    cursor: pointer;
+    background-color: rgb(122, 0, 24);
+    /* border: 2px solid white; */
+    color: white;
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); */
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.inputBox:focus {
+    border: solid rgb(170, 0, 133) 2px;
+    background-color: rgb(255, 217, 141);
+}
+
+label{
+    min-width: 30%;
+    max-width: 30%;
+    font-size: 20px;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.radioBtn{
+    font-size: 20px;
+    width:1em;
+    height:1em;
+}
+
+.text{
+    font-size: 20px;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+#subBtn {
+    width: 80vw;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 2%;
+    border: none;
+    background-color: crimson;
+    color: white;
+}
+#subBtn:hover{
+    cursor: pointer;
+    background-color: rgb(122, 0, 24);
+    border: 2px solid white;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.texts {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 2%;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.76);
+    color: crimson;
+}
+#SaleBtnLi{
+    background-color: brown;
+    color: white;
+    size: 20px;
+    padding: 20px;
+    width: 60px;
+    user-select: none;
+}
+#SaleBtnLi:hover{
+    background-color: rgb(97, 0, 0);
+    cursor: pointer;
+    user-select: none;
+}   
+#EditBtnLi{
+    background-color: rgb(57, 160, 44);
+    color: white;
+    size: 20px;
+    padding: 20px;
+    width: 60px;
+    user-select: none;
+}
+#EditBtnLi:hover{
+    background-color: rgb(8, 97, 0);
+    cursor: pointer;
+    user-select: none;
+}   
+#DeleteBtnLi{
+    background-color: rgb(160, 44, 150);
+    color: white;
+    size: 20px;
+    padding: 20px;
+    width: 60px;
+    user-select: none;
+}
+#DeleteBtnLi:hover{
+    background-color: rgb(69, 0, 97);
+    cursor: pointer;
+    user-select: none;
+}
+#data{
+    width: 30px;
+}
