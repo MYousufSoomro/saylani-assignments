@@ -113,7 +113,7 @@ function logIn() {
     }
     var getObj = JSON.parse(localStorage.getItem('userInfo'));
     console.log(localStorage.getItem('userInfo'));
-    if(localStorage.getItem('userInfo') === null){
+    if (localStorage.getItem('userInfo') === null) {
         swal({
             title: "There isn't any Account",
             text: "You have to Sign up First...",
@@ -172,22 +172,192 @@ function logIn() {
     }
 }
 
-function logOut(){
+function logOut() {
     swal({
         title: "Are you sure?",
         text: "Logout Now?",
         icon: "warning",
         buttons: true,
         dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
-          swal("You have Logout Successfully!", {
-            icon: "success",
-          })
-          .then(() => {
-            location = './login.html'
+    })
+        .then((LogOUT) => {
+            if (LogOUT) {
+                swal("You have Logout Successfully!", {
+                    icon: "success",
+                })
+                    .then(() => {
+                        location = './login.html'
+                    });
+            }
         });
-        }
-      });
 }
+
+(function delBTN() {
+    var data1 = document.getElementById('deleteBTN1');
+    var data2 = document.getElementById('deleteBTN2');
+    var data3 = document.getElementById('deleteBTN3');
+    data1.addEventListener("click", function () {
+        swal({
+            title: "Are you sure?",
+            text: "Delete This Item",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((DeleteBTN) => {
+                if (DeleteBTN) {
+                    this.parentNode.parentNode.remove();
+                    swal("You have Logout Successfully!", {
+                        icon: "success",
+                    });
+                }
+            });
+    });
+    data2.addEventListener("click", function () {
+        swal({
+            title: "Are you sure?",
+            text: "Delete This Item",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((DeleteBTN) => {
+                if (DeleteBTN) {
+                    this.parentNode.parentNode.remove();
+                    swal("You have Logout Successfully!", {
+                        icon: "success",
+                    });
+                }
+            });
+    });
+    data3.addEventListener("click", function () {
+        swal({
+            title: "Are you sure?",
+            text: "Delete This Item",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((DeleteBTN) => {
+                if (DeleteBTN) {
+                    this.parentNode.parentNode.remove();
+                    swal("You have Logout Successfully!", {
+                        icon: "success",
+                    });
+                }
+            });
+    });
+})()
+
+function deleteCard() {
+    swal({
+        title: "Are you sure?",
+        text: "Delete This Item",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+        .then((DeleteBTN) => {
+            if (DeleteBTN) {
+                this.parentNode.parentNode.remove();
+                swal("You have Logout Successfully!", {
+                    icon: "success",
+                });
+            }
+        });
+}
+
+function addItem() {
+    var addData = document.getElementById("addData");
+    var title = document.getElementById('title').value;
+    var description = document.getElementById('description').value;
+
+    var div1 = document.createElement("div");
+    var div2 = document.createElement("div");
+    var h5 = document.createElement("h5");
+    var p = document.createElement("p");
+    var div3 = document.createElement("div");
+    var buttonSale = document.createElement("button");
+    var div4 = document.createElement("div");
+    var buttonDel = document.createElement("button");
+
+    div1.setAttribute("class", "card");
+    div2.setAttribute("class", "card-body");
+    h5.setAttribute("class", "card-title");
+    p.setAttribute("class", "card-text");
+    div3.setAttribute("class", "card-footer");
+    buttonSale.setAttribute("type", "button");
+    buttonSale.setAttribute("class", "btn btn-outline-success btn-block");
+    div4.setAttribute("class", "card-footer");
+    buttonDel.setAttribute("type", "button");
+    buttonDel.setAttribute("class", "btn btn-outline-danger btn-block");
+
+    var h5Text = document.createTextNode(title);
+    var pText = document.createTextNode(description);
+    var buttonSaleText = document.createTextNode("Sale");
+    var buttonDelText = document.createTextNode("Delete");
+
+    h5.appendChild(h5Text);
+    p.appendChild(pText);
+    buttonSale.appendChild(buttonSaleText);
+    buttonDel.appendChild(buttonDelText);
+
+    div2.appendChild(h5);
+    div2.appendChild(p);
+    div3.appendChild(buttonSale);
+    div4.appendChild(buttonDel);
+
+    div1.appendChild(div2);
+    div1.appendChild(div3);
+    div1.appendChild(div4);
+
+    addData.appendChild(div1);
+
+    document.getElementById("AddItem").setAttribute("data-dismiss", "modal");
+    document.getElementById('title').value = "";
+    document.getElementById('description').value = "";
+
+    buttonDel.addEventListener("click", function () {
+        swal({
+            title: "Are you sure?",
+            text: "Delete This Item",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((DeleteBTN) => {
+                if (DeleteBTN) {
+                    this.parentNode.parentNode.remove();
+                    swal("You have Logout Successfully!", {
+                        icon: "success",
+                    });
+                }
+            });
+    })
+
+    buttonSale.addEventListener("click", function () {
+        swal({
+            title: "Sale this Item?",
+            text: "Do you want to sale this item? Confirm by clicking OK",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((SaleBTN) => {
+                if (SaleBTN) {
+                    saleOBJ.h1 = this.parentNode.parentNode.childNodes[0].childNodes[0].innerText;
+                    saleOBJ.desc = this.parentNode.parentNode.childNodes[0].childNodes[1].innerText;
+                    localStorage.setItem("saleOBJ" , JSON.stringify(saleOBJ));
+                    console.log(saleOBJ);
+                    this.parentNode.parentNode.remove();
+                    swal("You have Logout Successfully!", {
+                        icon: "success",
+                    });
+
+                }
+                
+            });
+    })
+}
+
+var saleOBJ = {};
