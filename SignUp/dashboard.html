@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./salePage.html">Sale Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./AddItem.html">Add Item</a>
+                </li>
+            </ul>
+            <input class="form-control mr-sm-2 col-lg-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success my-2 my-sm-0">Search</button>
+            <button class="btn btn-danger my-2 my-sm-0" onClick="logOut()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container-fluid col-md-8">
+        <h1 class="jumbotron">Welcome to Dashboard</h1>
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung On5</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae, vitae. Ea eius nostrum nisi magni ipsa incidunt eaque sequi unde corporis. Temporibus pariatur alias vitae quos aspernatur consequuntur, voluptatem est?</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-success btn-block">Sale</button>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-danger btn-block">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">iPhone X</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit deserunt dolorem sint in maiores minus necessitatibus quia, nostrum debitis asperiores nulla dolor tempora nemo veniam inventore odit qui velit eaque.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-success btn-block">Sale</button>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-danger btn-block">Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Honor 5X Pro</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis reiciendis repellat distinctio quisquam ducimus facilis aliquam fugit illo quasi ex eaque consequatur atque eum aliquid corporis voluptatibus iure, minima laudantium.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-success btn-block">Sale</button>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-outline-danger btn-block">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-bottom navbar-light bg-dark">
+        <p class="text-white card-link">Designed by:
+            <a class="card-link" href="https://www.twitter.com/MYousufSoomro/" target="_blank">
+                Muhammad Yousuf
+            </a>
+        </p>
+    </nav>
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
