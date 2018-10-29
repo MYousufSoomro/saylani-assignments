@@ -6,71 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up Page</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body onload="adminInfo()">
-    <div id="mainDiv">
-        <div id="head_para">
-            <h1>
-                Sign Up
-            </h1>
-            <p>
-                Fill out the all fields completely
-            </p>
+<body>
+    <div class="container-fluid col-md-8">
+        <h1 class="text-center jumbotron bg-success">Gharana Shop</h1>
+
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="fName">First name</label>
+                <input type="text" class="form-control" id="fName" placeholder="First name">
+                <div id="fNameError"></div>
+            </div>
+            <div class="col-md-6">
+                <label for="lName">Last name</label>
+                <input type="text" class="form-control" id="lName" placeholder="Last name">
+                <div id="lNameError"></div>
+            </div>
         </div>
-        <div class="details">
-            <label class="label">
-                First Name:
+        <div class="form-row">
+            <div class="col-md-6">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="example@domain.com">
+                <div id="emailError"></div>
+            </div>
+            <div class="col-md-3">
+                <label for="Password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+                <div id="passwordError"></div>
+            </div>
+            <div class="col-md-3">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Password">
+                <div id="confirmPasswordError"></div>
+            </div>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">
+                Agree to terms and conditions
             </label>
-            <input type="text" class="inputBox" id="fName" required />
+            <div class="invalid-feedback" id="termsCondError">
+
+            </div>
         </div>
-        <div class="details">
-            <label class="label">
-                Last Name:
-            </label>
-            <input type="text" class="inputBox" id="lName" required />
-        </div>
-        <div class="details">
-            <label class="label">
-                Email Address:
-            </label>
-            <input type="email" class="inputBox" id="email" required />
-        </div>
-        <div class="details">
-            <label class="label">
-                Password:
-            </label>
-            <input type="password" class="inputBox" id="password" required />
-        </div>
-        <div class="details">
-            <label class="label">
-                Confirm Password:
-            </label>
-            <input type="password" class="inputBox" id="confPass" required />
-        </div>
-        
-        <!-- <div class="details">
-            <label class="label">
-                Gender:
-            </label>
-            <input class="radioBtn" type="radio" name="gender" value="male" />
-            <span class="text">Male</span>
-            <input class="radioBtn" type="radio" name="gender" value="female" />
-            <span class="text">Female</span>
-            <input class="radioBtn" type="radio" name="gender" value="other" />
-            <span class="text">Other</span>
-        </div> -->
-        <button id="subBtn" onClick="signUp()">SignUp</button>
-        <div class="texts">
-            Already have an account? <a href="login.html">Log in</a> now!
-        </div>
+        <button class="btn btn-primary col-md-12" type="submit" onClick="RunTest()">Sign up!</button>
+        <hr />
+        <p class="p1">Already have an account? <a href="./login.html" class="card-link">Login Now</a></p>
+
     </div>
 
-
-
-
-
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 
