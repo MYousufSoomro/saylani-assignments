@@ -144,6 +144,7 @@ function logIn() {
                 .then(() => {
                     location = './dashboard.html'
                 });
+
         } else {
             swal({
                 title: "Password is not Correct",
@@ -171,6 +172,33 @@ function logIn() {
             });
     }
 }
+
+function userName() {
+    if (localStorage.getItem('userInfo') === null) {
+        swal({
+            title: "Error!",
+            text: "You have to Sign up First...",
+            icon: "error",
+            button: {
+                text: "Sign up",
+                closeModal: true,
+            }
+        })
+            .then(() => {
+                location = './index.html'
+            });
+    } else {
+        var userFName = (JSON.parse(localStorage.getItem("userInfo"))).fName;
+        var userLName = (JSON.parse(localStorage.getItem("userInfo"))).lName;
+        var JumboArea = document.getElementById("JumboArea");
+        var smallEle = document.createElement("small");
+        var userNameFill = document.createTextNode("Welcome " + userFName + " " + userLName);
+        smallEle.appendChild(userNameFill);
+        JumboArea.appendChild(smallEle);
+        soldItemsCheck();
+    }
+}
+
 
 function logOut() {
     swal({
@@ -207,8 +235,11 @@ function logOut() {
             .then((DeleteBTN) => {
                 if (DeleteBTN) {
                     this.parentNode.parentNode.remove();
-                    swal("You have Logout Successfully!", {
+                    swal({
+                        title: "Item Deleted",
+                        text: "You have successfully deleted this Item",
                         icon: "success",
+                        buttons: true,
                     });
                 }
             });
@@ -224,8 +255,11 @@ function logOut() {
             .then((DeleteBTN) => {
                 if (DeleteBTN) {
                     this.parentNode.parentNode.remove();
-                    swal("You have Logout Successfully!", {
+                    swal({
+                        title: "Item Deleted",
+                        text: "You have successfully deleted this Item",
                         icon: "success",
+                        buttons: true,
                     });
                 }
             });
@@ -241,37 +275,108 @@ function logOut() {
             .then((DeleteBTN) => {
                 if (DeleteBTN) {
                     this.parentNode.parentNode.remove();
-                    swal("You have Logout Successfully!", {
+                    swal({
+                        title: "Item Deleted",
+                        text: "You have successfully deleted this Item",
                         icon: "success",
+                        buttons: true,
                     });
                 }
             });
     });
+})();
+
+
+(function saleBTN() {
+    var sale1 = document.getElementById('saleBTN1');
+    var sale2 = document.getElementById('saleBTN2');
+    var sale3 = document.getElementById('saleBTN3');
+    sale1.addEventListener("click", function () {
+        swal({
+            title: "Sale this Item?",
+            text: "Do you want to sale this item? Confirm by clicking OK",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((SaleBTN) => {
+                if (SaleBTN) {
+                    saleItemH5.push(this.parentNode.parentNode.childNodes[1].childNodes[1].innerHTML);
+                    saleItemDesp.push(this.parentNode.parentNode.childNodes[1].childNodes[3].innerHTML);
+                    localStorage.setItem("saleItemH5", JSON.stringify(saleItemH5));
+                    localStorage.setItem("saleItemDesp", JSON.stringify(saleItemDesp));
+                    this.parentNode.parentNode.remove();
+                    swal({
+                        title: "Done",
+                        text: "You have successfully sale this item",
+                        icon: "success",
+                        buttons: true,
+                    });
+
+                }
+
+            });
+    });
+    sale2.addEventListener("click", function () {
+        swal({
+            title: "Sale this Item?",
+            text: "Do you want to sale this item? Confirm by clicking OK",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((SaleBTN) => {
+                if (SaleBTN) {
+                    saleItemH5.push(this.parentNode.parentNode.childNodes[1].childNodes[1].innerHTML);
+                    saleItemDesp.push(this.parentNode.parentNode.childNodes[1].childNodes[3].innerHTML);
+                    localStorage.setItem("saleItemH5", JSON.stringify(saleItemH5));
+                    localStorage.setItem("saleItemDesp", JSON.stringify(saleItemDesp));
+                    this.parentNode.parentNode.remove();
+                    swal({
+                        title: "Done",
+                        text: "You have successfully sale this item",
+                        icon: "success",
+                        buttons: true,
+                    });
+
+                }
+
+            });
+    });
+    sale3.addEventListener("click", function () {
+        swal({
+            title: "Sale this Item?",
+            text: "Do you want to sale this item? Confirm by clicking OK",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((SaleBTN) => {
+                if (SaleBTN) {
+                    saleItemH5.push(this.parentNode.parentNode.childNodes[1].childNodes[1].innerHTML);
+                    saleItemDesp.push(this.parentNode.parentNode.childNodes[1].childNodes[3].innerHTML);
+                    localStorage.setItem("saleItemH5", JSON.stringify(saleItemH5));
+                    localStorage.setItem("saleItemDesp", JSON.stringify(saleItemDesp));
+                    this.parentNode.parentNode.remove();
+                    swal({
+                        title: "Done",
+                        text: "You have successfully sale this item",
+                        icon: "success",
+                        buttons: true,
+                    });
+
+                }
+
+            });
+    });
 })()
 
-function deleteCard() {
-    swal({
-        title: "Are you sure?",
-        text: "Delete This Item",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-    })
-        .then((DeleteBTN) => {
-            if (DeleteBTN) {
-                this.parentNode.parentNode.remove();
-                swal("You have Logout Successfully!", {
-                    icon: "success",
-                });
-            }
-        });
-}
+
 
 function addItem() {
     var addData = document.getElementById("addData");
     var title = document.getElementById('title').value;
     var description = document.getElementById('description').value;
-
     var div1 = document.createElement("div");
     var div2 = document.createElement("div");
     var h5 = document.createElement("h5");
@@ -328,8 +433,11 @@ function addItem() {
             .then((DeleteBTN) => {
                 if (DeleteBTN) {
                     this.parentNode.parentNode.remove();
-                    swal("You have Logout Successfully!", {
+                    swal({
+                        title: "Item Deleted",
+                        text: "You have successfully deleted this Item",
                         icon: "success",
+                        buttons: true,
                     });
                 }
             });
@@ -345,19 +453,105 @@ function addItem() {
         })
             .then((SaleBTN) => {
                 if (SaleBTN) {
-                    saleOBJ.h1 = this.parentNode.parentNode.childNodes[0].childNodes[0].innerText;
-                    saleOBJ.desc = this.parentNode.parentNode.childNodes[0].childNodes[1].innerText;
-                    localStorage.setItem("saleOBJ" , JSON.stringify(saleOBJ));
-                    console.log(saleOBJ);
+                    saleItemH5.push(this.parentNode.parentNode.childNodes[0].childNodes[0].innerHTML);
+                    saleItemDesp.push(this.parentNode.parentNode.childNodes[0].childNodes[1].innerHTML);
+                    localStorage.setItem("saleItemH5", JSON.stringify(saleItemH5));
+                    localStorage.setItem("saleItemDesp", JSON.stringify(saleItemDesp));
                     this.parentNode.parentNode.remove();
-                    swal("You have Logout Successfully!", {
+                    swal({
+                        title: "Done",
+                        text: "You have successfully sale this item",
                         icon: "success",
+                        buttons: true,
                     });
 
                 }
-                
+
             });
     })
 }
 
-var saleOBJ = {};
+var saleItemH5 = [];
+var saleItemDesp = [];
+
+function soldItems() {
+    if (localStorage.getItem('saleItemH5') === null || localStorage.getItem('saleItemDesp') === null) {
+        swal({
+            title: "You have not sold any thing!",
+            text: "Try to Sale any Item First...",
+            icon: "error",
+            button: {
+                text: "OK",
+                closeModal: true,
+            }
+        })
+            .then(() => {
+                location = './dashboard.html'
+            });
+    } else {
+        var saleItemH5 = JSON.parse(localStorage.getItem("saleItemH5"));
+        var saleItemDesp = JSON.parse(localStorage.getItem("saleItemDesp"));
+    }
+
+    for (var i = 0; i < saleItemH5.length; i++) {
+        var SoldData = document.getElementById("SoldData");
+        var title = saleItemH5[i];
+        var description = saleItemDesp[i];
+
+        var div1 = document.createElement("div");
+        var div2 = document.createElement("div");
+        var h5 = document.createElement("h5");
+        var p = document.createElement("p");
+
+        div1.setAttribute("class", "card bg-info text-white");
+        div2.setAttribute("class", "card-body");
+        h5.setAttribute("class", "card-title");
+        p.setAttribute("class", "card-text");
+
+        var h5Text = document.createTextNode(title);
+        var pText = document.createTextNode(description);
+
+        h5.appendChild(h5Text);
+        p.appendChild(pText);
+
+        div2.appendChild(h5);
+        div2.appendChild(p);
+
+        div1.appendChild(div2);
+
+        SoldData.appendChild(div1);
+    }
+}
+
+function soldItemsCheck() {
+    if (localStorage.getItem('saleItemH5') === null || localStorage.getItem('saleItemDesp') === null) {
+        console.log("No items sold yet...");
+    } else {
+        var saleItemH5 = JSON.parse(localStorage.getItem("saleItemH5"));
+        console.log(saleItemH5);
+        var saleItemDesp = JSON.parse(localStorage.getItem("saleItemDesp"));
+
+        var product1Head = document.getElementById("product1Head").innerHTML;
+        var product2Head = document.getElementById("product2Head").innerHTML;
+        var product3Head = document.getElementById("product3Head").innerHTML;
+
+        var product1Desc = document.getElementById("product1Desc").innerHTML;
+        var product2Desc = document.getElementById("product2Desc").innerHTML;
+        var product3Desc = document.getElementById("product3Desc").innerHTML;
+
+        for (var i = 0; i < saleItemH5.length; i++) {
+            if (saleItemH5[i] === product1Head && saleItemDesp[i] === product1Desc) {
+                document.getElementById("product1Desc").parentNode.parentNode.innerHTML= "";
+                document.getElementById("product1Desc").parentNode.parentNode.removeAttribute("class");
+            } else if (saleItemH5[i] === product2Head && saleItemDesp[i] === product2Desc) {
+                document.getElementById("product2Desc").parentNode.parentNode.innerHTML= "";
+                document.getElementById("product2Desc").parentNode.parentNode.removeAttribute("class");
+            } else if (saleItemH5[i] === product3Head && saleItemDesp[i] === product3Desc) {
+                document.getElementById("product3Desc").parentNode.parentNode.innerHTML= "";
+                (document.getElementById("product3Desc").parentNode.parentNode).setAttribute("class", "");
+            } else {
+                console.log("No built-in items sold yet...");
+            }
+        }
+    }
+}
