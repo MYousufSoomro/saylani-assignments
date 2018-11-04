@@ -15,20 +15,6 @@ function RunTest() {
     if (fName.match(NameReg)) {
         document.getElementById("fNameError").innerText = "";
         dataObj.fName = fName;
-<<<<<<< HEAD
-    } else {
-        document.getElementById("fNameError").innerText = "Please Enter First Name";
-        document.getElementById('fNameError').setAttribute('class', "text-danger");
-        return false;
-    }
-
-    if (lName.match(NameReg)) {
-        document.getElementById("lNameError").innerText = "";
-        dataObj.lName = lName;
-    } else {
-        document.getElementById("lNameError").innerText = "Please Enter Last Name";
-        document.getElementById('lNameError').setAttribute('class', "text-danger");
-=======
     } else {
         document.getElementById("fNameError").innerText = "Please Enter First Name";
         document.getElementById('fNameError').setAttribute('class', "text-danger");
@@ -90,15 +76,10 @@ function RunTest() {
     } else {
         document.getElementById("termsCondError").innerText = "You must agree before submitting.";
         document.getElementById('termsCondError').setAttribute('class', "text-danger");
->>>>>>> db8f40e09236946468f92bdf64b9aa0204cb1652
         return false;
     }
+}
 
-<<<<<<< HEAD
-    if (email.match(EmailReg)) {
-        document.getElementById("emailError").innerText = "";
-        dataObj.email = email;
-=======
 function resetForm() {
     document.getElementById('fName').value = "";
     document.getElementById('lName').value = "";
@@ -117,13 +98,10 @@ function logIn() {
 
     if (email.match(EmailReg)) {
         document.getElementById("emailError").innerText = "";
->>>>>>> db8f40e09236946468f92bdf64b9aa0204cb1652
     } else {
         document.getElementById("emailError").innerText = "Please Correct Email Address";
         document.getElementById('emailError').setAttribute('class', "text-danger");
         return false;
-<<<<<<< HEAD
-=======
     }
 
     if (password.match(PasswordReg)) {
@@ -192,53 +170,9 @@ function logIn() {
             .then(() => {
                 location = './login.html'
             });
->>>>>>> db8f40e09236946468f92bdf64b9aa0204cb1652
-    }
-
-<<<<<<< HEAD
-    if (password.match(PasswordReg)) {
-        document.getElementById("passwordError").innerText = "";
-        if (password === confirmPassword) {
-            document.getElementById("confirmPasswordError").innerText = "";
-            dataObj.password = password;
-        } else {
-            document.getElementById("confirmPasswordError").innerText = "Please Enter Same Password";
-            document.getElementById('confirmPasswordError').setAttribute('class', "text-danger");
-            return false;
-        }
-    } else {
-        document.getElementById("passwordError").innerText = "Password Must be Between 6 - 10 contains A-Z, a-z & 0-9 only";
-        document.getElementById('passwordError').setAttribute('class', "text-danger");
-        return false;
-    }
-
-    if (termsCond.checked){
-        document.getElementById("termsCondError").innerText = "";
-        console.log(dataObj);
-        localStorage.setItem('userInfo', JSON.stringify(dataObj));
-        resetForm();
-        swal({
-            title: "Account Created!",
-            text: "Your account has been successfuly created!",
-            icon: "success",
-            button: "OK!",
-          });
-    }else{
-        document.getElementById("termsCondError").innerText = "You must agree before submitting.";
-        document.getElementById('termsCondError').setAttribute('class', "text-danger");
-        return false;
     }
 }
 
-function resetForm(){
-    document.getElementById('fName').value = "";
-    document.getElementById('lName').value = "";
-    document.getElementById('email').value = "";
-    document.getElementById('password').value = "";
-    document.getElementById('confirmPassword').value = "";
-    document.getElementById('customCheck1').removeAttribute('checked');
-}
-=======
 function userName() {
     if (localStorage.getItem('userInfo') === null) {
         swal({
@@ -621,4 +555,3 @@ function soldItemsCheck() {
         }
     }
 }
->>>>>>> db8f40e09236946468f92bdf64b9aa0204cb1652
