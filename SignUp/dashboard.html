@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#007BFF" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+</head>
+
+<body onload="userName()">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="./dashboard.html"><i class="fas fa-home"></i> Gharana Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./dashboard.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./salePage.html"><i class="fas fa-shopping-cart"></i> Sale Items</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#exampleModal" data-toggle="modal"><i class="fas fa-plus-circle"></i>
+                        Add Item</a>
+                </li>
+            </ul>
+            <a href="http://www.gharana.pk/?utm-source=shop_dashboard" target="_blank" class="btn btn-warning font-weight-bold"
+                role="button" aria-pressed="true">Goto Gharana.PK</a>
+            <button class="btn btn-danger my-2 my-sm-0" onClick="logOut()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+    </nav>
+
+    <div class="container-fluid col-md-8">
+        <div id="JumboArea" class="jumbotron">
+            <h1><i class="fas fa-home fa-lg"></i> Dashboard</h1>
+        </div>
+        <div id="addData" class="card-columns">
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="product1Head" class="card-title">Samsung On5</h5>
+                    <p id="product1Desc" class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Beatae, vitae. Ea
+                        eius nostrum nisi magni ipsa incidunt eaque sequi unde corporis. Temporibus pariatur alias
+                        vitae quos aspernatur consequuntur, voluptatem est?</p>
+                </div>
+                <div class="card-footer">
+                    <button id="saleBTN1" type="button" class="btn btn-outline-success btn-block"><i class="fas fa-shopping-cart"></i>
+                        Sale</button>
+                </div>
+                <div class="card-footer">
+                    <button id="deleteBTN1" type="button" class="btn btn-outline-danger btn-block"><i class="fas fa-trash-alt"></i>
+                        Delete</button>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="product2Head" class="card-title">iPhone X</h5>
+                    <p id="product2Desc" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit deserunt dolorem
+                        sint in maiores minus necessitatibus quia, nostrum debitis asperiores nulla dolor tempora nemo
+                        veniam inventore odit qui velit eaque.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" id="saleBTN2" class="btn btn-outline-success btn-block"><i class="fas fa-shopping-cart"></i>
+                        Sale</button>
+                </div>
+                <div class="card-footer">
+                    <button id="deleteBTN2" type="button" class="btn btn-outline-danger btn-block"><i class="fas fa-trash-alt"></i>
+                        Delete</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="product3Head" class="card-title">Honor 5X Pro</h5>
+                    <p id="product3Desc" class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis reiciendis
+                        repellat distinctio quisquam ducimus facilis aliquam fugit illo quasi ex eaque consequatur
+                        atque eum aliquid corporis voluptatibus iure, minima laudantium.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" id="saleBTN3" class="btn btn-outline-success btn-block"><i class="fas fa-shopping-cart"></i>
+                        Sale</button>
+                </div>
+                <div class="card-footer">
+                    <button id="deleteBTN3" type="button" class="btn btn-outline-danger btn-block"><i class="fas fa-trash-alt"></i>
+                        Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-bottom navbar-light bg-dark">
+        <p class="text-white card-link">Designed by:
+            <a class="card-link" href="https://www.twitter.com/MYousufSoomro/" target="_blank">
+                Muhammad Yousuf
+            </a>
+        </p>
+    </nav>
+
+    <!-- Start ===>>>> Modal Coding for Add item to Dashboard -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Item</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Description:</label>
+                            <textarea class="form-control" id="description"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onClick="addItem()" id="AddItem">Add Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Coding for Add item to Dashboard <<<<======== END-->
+
+
+
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

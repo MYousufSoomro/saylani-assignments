@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#343A40" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container-fluid col-md-8">
+        <div id="loginDiv">
+            <h1 class="text-center jumbotron bg-dark text-white">Gharana Shop</h1>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="example@domain.com">
+                    <div id="emailError"></div>
+                </div>
+                <div class="col-md-6">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <div id="passwordError"></div>
+                </div>
+            </div>
+            <hr />
+            <div class="form-row">
+                <button class="btn btn-primary col-md-12" type="submit" onClick="logIn()">Log in!</button>
+            </div>
+            <hr />
+        <p class="p1">Don't have an account? <a href="./index.html" class="card-link">Sign up Now</a></p>
+
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
