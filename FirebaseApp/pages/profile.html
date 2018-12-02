@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Profile - Firebasor's</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#28A745" />
+    <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif" />
+    <link
+      rel="stylesheet"
+      href="../css/custom-stylesheet.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../bootstrap/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../bootstrap/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="mainBody" class="mainBody">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+        <a class="navbar-brand" href="./home.html"
+          ><i class="fas fa-fire"></i> Firebasor's</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./home.html"
+                ><i class="fas fa-home"></i> Home
+                <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./profile.html"
+                ><i class="fas fa-user"></i> Profile</a
+              >
+            </li>
+          </ul>
+          <div class="form-inline my-2 my-lg-0">
+            <div class="input-group mr-2">
+              <div class="input-group-prepend">
+                <!--
+                  <label class="input-group-text" for="inputGroupSelect01">News Sources</label>
+                -->
+              </div>
+              <!-- <select class="custom-select" id="selector"></select> -->
+            </div>
+            <button class="btn btn-danger my-2 my-sm-0" onCLick="logOut()">
+              <i class="fas fa-sign-out-alt"></i> Log out
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!--
+        <div class="container col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 ">
+            <div class="container">
+                <h2>Profile Page</h2>
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><span class="glyphicon glyphicon-user"></span> Full Name:</div>
+                        <div id="name" class="panel-body">Loading...</div>
+                    </div>
+                </div>
+
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><span class="glyphicon glyphicon-envelope"></span> Email Address:</div>
+                        <div id="email" class="panel-body">Loading...</div>
+                    </div>
+                </div>
+
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><span class="glyphicon glyphicon-home"></span> Postal Address:</div>
+                        <div id="address" class="panel-body">Loading...</div>
+                    </div>
+                </div>
+
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading"><span class="glyphicon glyphicon-bookmark"></span> User Type:</div>
+                        <div id="type" class="panel-body">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      -->
+
+      <div class="ml-5 mr-5 mt-3">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              id="home-tab"
+              data-toggle="tab"
+              href="#home"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="profile-tab"
+              data-toggle="tab"
+              href="#profile"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+              >Social</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              id="contact-tab"
+              data-toggle="tab"
+              href="#contact"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Emergency Contact</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th scope="row">Name:</th>
+                  <td id="name">Loading...</td>
+                </tr>
+                <tr>
+                  <th scope="row">Email:</th>
+                  <td id="email">Loading...</td>
+                </tr>
+                <tr>
+                  <th scope="row">Date of Birth:</th>
+                  <td id="dob">Loading...</td>
+                </tr>
+                <tr>
+                  <th scope="row">Address:</th>
+                  <td id="address">Loading...</td>
+                </tr>
+                <tr>
+                  <th scope="row">User Type:</th>
+                  <td id="type">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <!-- <span><a href="#"<i class="fab fa-facebook-square fa-10x" style="color:#4267B2;"></i></a></span>
+            <span><iclass="fab fa-whatsapp-square fa-10x" style="color:#4FCE5D;" ></i></span>
+            <span><i  class="fab fa-twitter-square fa-10x" style="color:#38A1F3;" ></i></span> -->
+
+            <!--
+              <span><i class="fab fa-instagram fa-10x" style="color:#fb3958;"></i></span>
+              <span><i class="fab fa-skype fa-10x" style="color:#00AFF0;"></i></span>
+              <span><i class="fab fa-youtube fa-10x" style="color:#FF0000;"></i></span>
+              <span><i class="fab fa-pinterest-square fa-10x" style="color:#c8232c;"></i></span>
+              <span><i class="fab fa-tumblr-square fa-10x" style="color:#34526f;"></i></span>
+              <span><i class="fab fa-google-plus-square fa-10x" style="color:#db4a39;"></i></span>
+              <span><i class="fab fa-linkedin fa-10x" style="color:#0077B5;"></i></span>
+              <span><i class="fab fa-flickr fa-10x" style="color:#ff0084;"></i></span>
+            -->
+          </div>
+          <div
+            class="tab-pane fade"
+            id="contact"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th scope="row">Name:</th>
+                  <td id="emerName">Loading...</td>
+                </tr>
+                <tr>
+                  <th scope="row">Relation:</th>
+                  <td id="relation">Loading...</td>
+                </tr>
+                <tr>
+                  <th scope="row">Emergency Contact:</th>
+                  <td id="emer_number">Loading...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="../js/firebase_init.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

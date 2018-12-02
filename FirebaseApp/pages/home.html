@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homepage - Firebasor's</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#28A745" />
+    <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif" />
+    <link rel="stylesheet" href="../css/custom-stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="mainBody" class="mainBody">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+            <a class="navbar-brand" href="./home.html"><i class="fas fa-fire"></i> Firebasor's</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./home.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <div class="input-group mr-2">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">News Sources</label>
+                        </div>
+                        <select class="custom-select" id="selector"></select>
+                    </div>
+                    <button class="btn btn-danger my-2 my-sm-0" onCLick="logOut()"><i class="fas fa-sign-out-alt"></i>
+                        Log out</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container col-lg-10 col-md-10 col-sm-10">
+            <div class="alert alert-success mt-3" role="alert">
+                <h2 class="alert-heading">Today's Top Stories from News API</h2>
+                <p>Select News Source from the above Navbar to see more News</p>
+                <hr>
+                <div class="text-right">
+                    <p class="mb-0">Powered by: <a href="https://newsapi.org/?ref=@MYousufSoomro-on-twitter?source=saylani-student"
+                            target="_blank"><strong>NewsAPI.org</strong></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container col-lg-10 col-md-10 col-sm-10" id="div"></div>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="../js/firebase_init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/profile-news.js"></script>
+</body>
+
+</html>

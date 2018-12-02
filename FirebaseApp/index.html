@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Firebasor's</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#28A745" />
+    <link rel="shortcut icon" type="image/gif" href="./images/favicon.gif" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+      <a class="navbar-brand" href="#"
+        ><i class="fas fa-fire"></i> Firebasor's</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              ><i class="fas fa-home"></i> Home
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <!--
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          -->
+          <a class="btn btn-success my-2 my-sm-0 mr-2" href="./pages/login.html"
+            ><i class="fas fa-sign-in-alt"></i> Login</a
+          >
+          <a class="btn btn-primary my-2 my-sm-0" href="./pages/signUp.html"
+            ><i class="fas fa-user-plus"></i> Sign Up</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="container col-lg-8 col-md-8 col-sm-10">
+      <div class="alert alert-danger mt-3" role="alert">
+        <h2 class="alert-heading text-center">Welcome to our News App</h2>
+        <h5>Authorzation Required</h5>
+        <hr />
+        <p class="mb-0">
+          Dear Visitor, Please <strong>Login</strong> or
+          <strong>Sign Up</strong> to continue...
+        </p>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="./js/firebase_init.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // user is signed in.
+          window.location.href = "./pages/home.html";
+        } else {
+          // No user is signed in.
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Newsfeed - Firebasor's</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#28A745" />
+    <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif" />
+    <link rel="stylesheet" href="../css/custom-stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="mainBody">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+            <a class="navbar-brand" href="./home.html"><i class="fas fa-fire"></i> Firebasor's</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./home.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./newsfeed.html"><i class="fas fa-user"></i> Newsfeed</a>
+                    </li>
+                </ul>
+                <div class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-success my-2 my-sm-0 mr-2" data-toggle="modal" data-target="#newPost"><i
+                            class="fas fa-edit"></i>
+                        Add Post</button>
+                    <button class="btn btn-danger my-2 my-sm-0" onCLick="logOut()"><i class="fas fa-sign-out-alt"></i>
+                        Log out</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container col-lg-10 col-md-10 col-sm-10 col-xm-10">
+            <div class="alert alert-primary mt-3" role="alert">
+                <h2 class="alert-heading text-center"><i class="fab fa-hubspot"></i> Welcome!</h2>
+                <hr>
+                <p class="mb-0">Dear <strong id="userName">Member</strong>, You can Add your new Post by Clicking <span
+                        class="badge badge-success"><i class="fas fa-edit"></i> Add Post</span> button in Navbar... </p>
+            </div>
+
+            <!-- Posts Display Area -->
+
+            <div id="postsArea">
+                <div class="card mb-2" style="background-color: rgb(230, 230, 230);">
+                    <div class="card-body">
+                        <h2 class="card-title" style="color:rgb(42, 42, 255);">Kalaboard per FIring Howi, 2 Bodyguarf
+                            Zakhmi</h2>
+                        <hr>
+                        <p class="card-text lead">With supporting text below as a natural lead-in to additional
+                            content.</p>
+                        <footer class="blockquote-footer">Added on <cite title="Day">Saturday</cite> at <cite title="Time">3:54
+                                PM</cite></footer>
+                        <div class="text-right">
+                            <a href="#!" class="btn btn-primary btn-sm"><i class="far fa-edit"></i> Edit</a>
+                            <a href="#!" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Add New Post Display Modal Box -->
+        <div class="modal fade mo" id="newPost" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title"><i class="fas fa-edit"></i> Add New Post</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-bars"></i></span>
+                            </div>
+                            <input id="title" type="text" class="form-control" name="name" placeholder="Title of Your Post..."
+                                aria-label="Enter Your Full Name" aria-describedby="button-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-sticky-note"></i></span>
+                            </div>
+                            <textarea id="desc" class="form-control" placeholder="Description of Your Post..." rows="3"></textarea>
+                        </div>
+                        <div id="loadingBar">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times-circle"></i>
+                            Cancel</button>
+                        <button type="button" class="btn btn-success" onClick="createPost()"><i class="fas fa-check-circle"></i>
+                            Post Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="../js/firebase_init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/newsfeed.js"></script>
+</body>
+
+</html>

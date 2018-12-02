@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up - Firebasor's</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#28A745" />
+    <link rel="shortcut icon" type="image/gif" href="../images/favicon.gif" />
+    <link rel="stylesheet" href="../css/custom-stylesheet.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+        <a class="navbar-brand" href="../index.html"><i class="fas fa-fire"></i> Firebasor's</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <a class="btn btn-success my-2 my-sm-0 mr-2" href="./login.html"><i class="fas fa-sign-in-alt"></i>
+                    Login</a>
+                <!-- <a class="btn btn-primary my-2 my-sm-0" href="./signUp.html"><i class="fas fa-user-plus"></i>
+                    Sign Up</a> -->
+            </div>
+        </div>
+    </nav>
+
+    <div id="formDiv" class="container col-lg-8 col-md-8 col-sm-10">
+        <div class="container">
+            <div class="container">
+                <div class="alert alert-primary mt-3" role="alert">
+                    <h2 class="alert-heading text-center">Sign Up to News App</h2>
+                    <hr>
+                    <p class="mb-0">Dear <strong>Visitor</strong>, Please Fill out this form to see Latest News from
+                        70+ Sources...</p>
+                </div>
+            </div>
+            <br />
+            <h3 style="color: #ff0090">Basic Info</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                </div>
+                <input id="name" type="text" class="form-control" name="name" placeholder="Full Name" aria-label="Enter Your Full Name"
+                    aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <input id="address" type="text" class="form-control" name="address" placeholder="Postal Address"
+                    aria-label="Enter Your complete Postal Address" aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                </div>
+                <input id="email" type="text" class="form-control" name="email" placeholder="Email Address" aria-label="Enter Your Email Address"
+                    aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input id="number" type="text" class="form-control" name="number" placeholder="Contact Number"
+                    aria-label="Contact Number" aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                </div>
+                <input id="dob" type="date" class="form-control" name="dob" aria-label="Select Your Date of Birth"
+                    aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input id="password" type="password" class="form-control" name="password" placeholder="Password"
+                    aria-label="Enter Your Secure Password" aria-describedby="button-addon1">
+            </div>
+            <hr>
+            <h3 style="color: #5b31f1">Social Profiles:</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fab fa-facebook-square" style="color:#4267B2;"></i></span>
+                </div>
+                <input id="facebook" type="text" class="form-control" name="facebook" placeholder="Facebook Username"
+                    aria-label="Complete URL to Facebook Profile" aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fab fa-twitter-square" style="color:#38A1F3;"></i></span>
+                </div>
+                <input id="twitter" type="text" class="form-control" name="twitter" placeholder="Twitter Username"
+                    aria-label="Complete URL to Facebook Profile" aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fab fa-whatsapp" style="color:#4FCE5D;"></i></span>
+                </div>
+                <input id="whatsapp" type="text" class="form-control" name="twitter" placeholder="e.g: 923001234567"
+                    aria-label="Your WhatsApp Number" aria-describedby="button-addon1">
+            </div>
+
+            <hr>
+            <h3 style="color: #00da2f">Emergency Contact Info:</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+                </div>
+                <input id="emerName" type="text" class="form-control" name="emerName" placeholder="Next of Kin Name"
+                    aria-label="Enter Next of Kin's Full Name " aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-users"></i></span>
+                </div>
+                <input id="relation" type="text" class="form-control" name="relation" placeholder="Relation with You"
+                    aria-label="Relation with You" aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                </div>
+                <input id="emer_number" type="text" class="form-control" name="emer_number" placeholder="Emergency Contact Number"
+                    aria-label="Emergency Contact Number" aria-describedby="button-addon1">
+            </div>
+
+            <hr>
+            <h3 style="color: #f1c431">Account Type:</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-certificate"></i></span>
+                </div>
+                <input id="type" type="text" class="form-control" name="type" placeholder="User" aria-label="Account Type User"
+                    aria-describedby="button-addon1" disabled>
+            </div>
+
+            <div class="text-right">
+                <button id='signUp' type="button" class="btn btn-primary btn-lg">Sign Up!</button>
+            </div>
+            <br />
+            <div class="loader" id="loading"></div>
+        </div>
+    </div>
+    <div id="load" class="container">
+        <div class="row">
+            <div id="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="lading"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script src="../js/firebase_init.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../js/signUp.js"></script>
+</body>
+
+</html>
